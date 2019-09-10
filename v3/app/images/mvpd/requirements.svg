@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				<!-- document.querySelectorAll('svg')[0].setAttribute('viewBox', '130 0 328 328'); -->
+			}
+		},false);
+	]]></script>
+	<style>
+		svg {
+			background: #F5E3E1;
+		}
+		@media screen and (max-width: 768px) {
+			#row {
+				transform: translateX(-90px);
+			}
+			#thumb3 {
+				display: none;
+			}
+		}
+	</style>
+
+	<defs>
+
+		<filter id="dropshadow" height="130%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+			<feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope=".24"/> <!-- slope is the opacity of the shadow -->
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> <!-- this contains the offset blurred image -->
+				<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+			</feMerge>
+		</filter>
+
+		<clipPath id="mask-thumb2">
+			<rect x="-128" y="0" width="656" height="328" />
+		</clipPath>
+
+		<clipPath id="mask-thumb3">
+			<rect x="-328" y="0" width="656" height="328" />
+		</clipPath>
+
+		<style type="text/css">
+		</style>
+	</defs>
+	<g id="row">
+
+		<image id="thumb2" x="-40" y="0" width="574.4901793" height="328" xlink:href="./discussing-requirements.png" ></image>
+
+		<image id="thumb3" x="-205" y="25" width="215" height="320.78" xlink:href="./requirements.png" style="filter:url(#dropshadow)"></image>
+		
+
+	</g>
+</svg>

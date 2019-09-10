@@ -1,0 +1,83 @@
+//Footer
+.footer-container {
+	padding: 30px 100px;
+	height: 190px;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+
+.city-container {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.address-container {
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+
+
+@keyframes glow {
+	0%   {top: 0; height: 0}
+	50%  {top: 25%; height: 50%}
+	100% {top: 100%; height: 0}
+}
+
+
+.nextpage-link__pop {
+	position: relative;
+	bottom: 0px;
+	transition: all 0.2s ease-in-out;
+	
+}
+
+
+
+
+.nextpage-link {
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 5px;
+	text-align: center;
+	left:50%;
+	transform: translateX(-50%);
+	margin-bottom: 10px;
+	height: 90px;
+	&:hover {
+		.nextpage-link__pop {
+			color: $color-primary;
+			bottom: 40px;
+		}
+		.nextpage-link__line {
+			height: 122px;
+		}
+	}
+}
+
+.nextpage-link__link {
+
+}
+.nextpage-link__line {
+	width: 1px;
+	height: 82px;
+	background-color: #ddd;
+	position: absolute;
+	left: 50%;
+	top: 18px;
+    &:before {
+    	content: "";
+    	position: absolute;
+    	animation-name: glow;
+		animation-duration: 1.5s;
+	    animation-iteration-count: infinite;
+	    background-color: $color-primary;
+	    width: 1px;
+    }
+}

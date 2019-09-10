@@ -1,0 +1,42 @@
+//// counter-container
+.counter-container {
+    min-height: 60%;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.projects {
+    .counter__number {
+        width: 23vw;
+    }
+}
+.wrapper.counters {
+    display: flex;
+    .wrapper {
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.counter__mark-cont {
+    display: flex;
+}
+
+.counter__number {
+    color: $color-primary;
+    font-size: 12vw;
+    color: #fff;
+    text-shadow: -1px 0 $color-primary, 0 1px $color-primary, 1px 0 $color-primary, 0 -1px $color-primary;
+}
+
+.employees {
+
+    
+    .counter__mark-cont {
+        display: flex;
+        position: relative;
+    }
+}

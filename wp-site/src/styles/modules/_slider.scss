@@ -1,0 +1,128 @@
+.slider-container {
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.3s linear;
+	position: relative;
+	position: relative;
+
+	padding: 80px 0px;
+
+	&.slider-container--initialized {
+		opacity: 1.0;
+	}
+
+	.title-container {
+		padding: 30px 100px 10px 100px;
+	}
+}
+
+.slider-content-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+}
+
+.slider-content-container {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	transform-origin: 0% 0%;
+	user-select: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.slider-item {
+	position: relative;
+	margin-right: 80px;
+}
+
+.slider-item-wrapper {
+
+}
+
+.slider-item__image {
+
+}
+
+.slider-item__info {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	color: #000;
+	
+}
+
+.slider-item__name {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.slider-item__title {
+	font-size: 12px;
+}
+
+
+@keyframes drag1 {
+	0%   {width: 20px}
+	50%  {width: 120px}
+	100%  {width: 20px}
+}
+@keyframes drag2 {
+	0%   {width: 120px}
+	50%  {width: 20px}
+	100%  {width: 120px}
+}
+
+.slider-tip-container {
+	cursor: pointer;
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+
+.slider-tip-text {
+	text-transform: uppercase;
+	font-size: 10px;
+	position: relative;
+	letter-spacing: 2px;
+	user-select: none;
+	opacity: 1.0;
+	transition: all 0.4s linear;
+	&:after, &:before {
+		content: "";
+		width: 50px;
+		height: 1px;
+		background-color: #000;
+		position: relative;
+		animation-duration: 2.4s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(0.8,0,0.2,1);
+		display: inline-block;
+		top:-4px;
+	}
+	&:before {
+		animation-name: drag1;
+		margin-right: 10px;
+	}
+	&:after {
+		animation-name: drag2;
+		margin-left: 10px;
+	}
+	.hide-tip & {
+		opacity: 0.0;
+	}
+}
+
+
+
+
+
+
+

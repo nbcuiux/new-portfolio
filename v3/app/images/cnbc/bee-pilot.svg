@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+
+	<!-- <script xlink:href="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				<!-- document.querySelectorAll('svg')[0].setAttribute('viewBox', '134 0 328 328'); -->
+			}
+
+			document.querySelectorAll('#lock-text')[0].textContent = "Jing is currently editing";
+			document.querySelectorAll('#bg, #lock-bg').forEach(elem => color(elem, '#24B37A')); 
+			document.querySelectorAll('#typing-text')[0].textContent = "Create meaningful articles";
+			document.querySelectorAll('#typing-text').forEach(elem => typing(elem));
+			var state = 1;
+
+			setInterval(function() {
+				if (state == 1) {
+					document.querySelectorAll('#lock-text')[0].textContent = "Alex is currently editing";
+					document.querySelectorAll('#bg, #lock-bg').forEach(elem => color(elem, '#FF2E2E')); 
+					document.querySelectorAll('#typing-text')[0].textContent = "Create persuasive articles";
+					document.querySelectorAll('#typing-text').forEach(elem => typing(elem));
+					state = 2;
+				}
+				else if (state == 2) {
+					document.querySelectorAll('#lock-text')[0].textContent = "Eric is currently editing";
+					document.querySelectorAll('#bg, #lock-bg').forEach(elem => color(elem, '#3680EA')); 
+					document.querySelectorAll('#typing-text')[0].textContent = "Create impactful articles";
+					document.querySelectorAll('#typing-text').forEach(elem => typing(elem));
+					state = 3;
+				}
+				else {
+					document.querySelectorAll('#lock-text')[0].textContent = "Jing is currently editing";
+					document.querySelectorAll('#bg, #lock-bg').forEach(elem => color(elem, '#24B37A'));	
+					document.querySelectorAll('#typing-text')[0].textContent = "Create meaningful articles";
+					document.querySelectorAll('#typing-text').forEach(elem => typing(elem));
+					state = 1;
+				}
+			}, 5000);
+		},false);
+
+		function color(element, color) {
+			element.setAttribute('fill', color);
+		}
+
+		function typing(element) {
+			var sentence = element.textContent.split(' ');
+			sentence[0] = sentence[0] + ' ';
+			sentence[2] = '| ' + sentence[2];
+			var middle = sentence[1].split('');
+			var current = '';
+			var index = 0;
+
+			var frameId;
+
+			function step() {
+				current += middle[index];
+				index++;
+				if (current == sentence[1]) cancelAnimationFrame(frameId);
+				element.textContent = sentence[0] + current.toString() + sentence[2];
+				if (current != sentence[1]) {
+					setTimeout(function() {
+						/* document.querySelectorAll('#bg')[0].setAttribute('x', (230 - element.clientWidth)); */
+						/* document.querySelectorAll('#bg')[0].setAttribute('width', (60 + element.clientWidth)); */
+						frameId = requestAnimationFrame(step);
+					}, 100);
+				}
+			}
+			step();
+		}
+	]]></script>
+
+	<style>
+		@font-face {
+		font-family: 'Roboto Thin';
+		src: url('../../fonts/Roboto/Roboto-Light.woff2') format('woff');
+		font-weight: 300;
+		font-style: normal;
+		}
+
+		text {
+		letter-spacing: 0.012em;
+		font-size: 11px;
+		font-weight: 300;
+		fill: #ffffff;
+		font-family: 'Roboto Thin';
+		}
+
+		#typing-text {
+		letter-spacing: 0px;
+		font-size: 21px;
+		}
+
+		#lock-text {
+		letter-spacing: 0.024em;
+		font-size: 6px;
+		}
+
+		line {
+		stroke-width: 1px;
+		stroke: #ffffff;
+		}
+
+		rect {
+		}
+
+		#bg {
+			fill-opacity: 0.2;
+		}
+
+		@keyframes grow {
+		0% { 
+		transform: scaleX(0.5);
+		}
+		100% {
+		transform: scaleX(1);
+		}
+		}
+	</style>
+
+	<image id="thumb2" x="-165" y="-40" width="656" height="437.3333333" xlink:href="./buildings.jpg" ></image>
+
+	<rect id="bg" x="35" y="110" width="255" height="45"></rect>
+	<text id="typing-text" x="165" y="142" text-anchor="middle">Create meaningful articles</text>
+
+	<g>
+		<rect id="lock-bg" x="209" y="110" width="80" height="9"></rect>
+		<image x="213" y="111" width="4.83" height="6" xlink:href="./lock.svg"></image>
+		<text id="lock-text" x="222" y="116"></text>
+	</g>
+
+	<text x="165" y="170" text-anchor="middle">BEE: Better Editorial Experience</text>
+
+	<image x="140" y="180" width="40" height="40" xlink:href="./bee.svg" ></image>
+	<!-- <text x="60" y="140">Create</text> -->
+		<!-- <path id="path">
+		<animate attributeName="d" from="m120,140 h0" to="m120,140 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
+		</path>
+		<text >
+			<textPath xlink:href="#path">meaningful</textPath>
+		</text> -->
+
+		<!-- <text x="160" y="140">articles</text> -->
+	</svg>

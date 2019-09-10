@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+
+	<style>
+		svg {
+		background: transparent;
+		}
+		
+		#slice1 {
+		-webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 7%);
+		clip-path: polygon(0% 100%, 100% 100%, 0% 7%);
+		animation: cut1 7.2s infinite;
+		-webkit-animation: cut1 7.2s infinite;
+		transform: translate(5px, 2px);
+
+		}
+
+		#slice2 {
+		animation: cut2 7.2s infinite;
+		-webkit-animation: cut2 7.2s infinite;
+		transform: translate(-1px, 0px);
+		-webkit-clip-path: polygon(0 7%, 100% 100%, 100% 0);
+		clip-path: polygon(0 7%, 100% 100%, 100% 0);
+		}
+
+		@keyframes cut1 {
+		0%, 25%, 65%, 100% {
+		transform: translate(5px, 2px);
+		}
+		30%, 60% {
+		transform: translate(0px, 0px);
+		}
+		}
+
+		@keyframes cut2 {
+		0%, 25%, 65%, 100% {
+		transform: translate(-1px, 0px);
+		}
+		30%, 60% {
+		transform: translate(0px, 0px);
+		}
+		}
+
+
+	</style>
+	<defs>
+	</defs>
+
+	<g id="slice1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<image x="100" y="145.5" width="128" height="37.12" xlink:href="./z-nation-logo.png"></image>
+	</g>
+	<g id="slice2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<image x="100" y="145.5" width="128" height="37.12" xlink:href="./z-nation-logo.png"></image>
+	</g>
+</svg>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				var items = document.querySelectorAll('#card0, card0-image, #card0-text, #card01, #card01-image, #card01-text, #card02, #card02-image, #card02-text');
+
+				for (var i = 0; i < items.length; i++) {
+					items[i].setAttribute('x', -328)
+				}
+			}
+		},false);
+	]]></script>
+	<style>
+		@font-face {
+			font-family: 'Roboto Draft';
+			src: url('../../fonts/Roboto-Draft/RobotoDraft-Bold.woff2') format('woff');
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		svg {
+			background: #FAFAFA;
+			background: #F5F5F5;
+		}
+
+		rect {
+			box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+			fill: #FFFFFF;
+		}
+
+		text {
+			font-size: 9px;
+			fill: #333;
+			font-weight: bold;
+			letter-spacing: .1px;
+			font-family: 'Roboto Draft', sans-serif;
+		}
+
+		.animate {
+			transform-origin: center;
+			animation: shift 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+			-webkit-animation: shift 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+			animation-fill-mode: forwards;
+		}
+
+		#item1 {
+			animation-delay: 0s;
+			-webkit-animation-delay: 0s;
+		}
+
+		#item3 {
+			animation-delay: 2s;
+			-webkit-animation-delay: 2s;
+		}
+
+		#item6 {
+			animation-delay: 4s;
+			-webkit-animation-delay: 4s;
+		}
+
+		#item9 {
+			animation-delay: 8s;
+			-webkit-animation-delay: 8s;
+		}
+
+		#item11 {
+			animation-delay: 6s;
+			-webkit-animation-delay: 6s;
+		}
+
+		@keyframes shift {
+			0%, 48%, 62%, 100% {
+				transform: translate(0,0);
+			}
+
+			54%, 58% {
+				transform: translate(-1px, -2px);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			#card0, card0-image, #card0-text, #card01, #card01-image, #card01-text, #card02, #card02-image, #card02-text  {
+				display: none;
+			}
+		}
+	</style>
+
+	<defs>
+		<filter id="dropshadow" height="130%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="0"/> <!-- stdDeviation is how much to blur -->
+			<feOffset dx="1" dy="1" result="offsetblur"/> <!-- how much to offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="0.1"/> <!-- slope is the opacity of the shadow -->
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> <!-- this contains the offset blurred image -->
+				<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+			</feMerge>
+		</filter>
+	</defs>
+
+			<!-- Row 1 -->
+		<rect id="card0" x="-210" y="25" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card0-image" x="-175" y="32" width="38" height="38" xlink:href="./design.svg"></image>
+		<text id="card0-text" x="-160" y="90" text-anchor="middle">Design Director</text>
+
+		<rect id="card1" x="-80" y="25" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card1-image" x="-45" y="32" width="38" height="38" xlink:href="./headline.svg"></image>
+		<text id="card1-text" x="-30" y="90" text-anchor="middle">News Associate</text>
+
+		<rect id="card2" x="45" y="25" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card2-image" x="80" y="32" width="38" height="38" xlink:href="./hot-seat.svg"></image>
+		<text id="card2-text" x="95" y="90" text-anchor="middle">Hot Seat</text>
+
+		<rect id="card3" x="175" y="25" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card3-image" x="215" y="32" width="38" height="38" xlink:href="./resume.svg"></image>
+		<text id="card3-text" x="230" y="90" text-anchor="middle">Copy Editor</text>
+
+		<rect id="card4" x="305" y="25" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card4-image" x="340" y="32" width="38" height="38" xlink:href="./share.svg"></image>
+		<text id="card4-text" x="360" y="90" text-anchor="middle">Social Media</text>
+
+		<!-- Row 2 -->
+		<rect id="card01" x="-210" y="124" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card01-image" x="-175" y="135" width="38" height="38" xlink:href="./share.svg"></image>
+		<text id="card01-text" x="-160" y="190" text-anchor="middle">Director, Social</text>
+
+		<rect id="card5" x="-80" y="124" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card5-image" x="-45" y="135" width="38" height="38" xlink:href="./briefcase.svg"></image>
+		<text id="card5-text" x="-30" y="190" text-anchor="middle">Make It Editor</text>
+
+		<rect id="card6" x="45" y="124" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card6-image" x="80" y="135" width="38" height="38" xlink:href="./production.svg"></image>
+		<text id="card6-text" x="95" y="190" text-anchor="middle">Video Producer</text>
+
+		<rect id="card7" x="175" y="124" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card7-image" x="210" y="135" width="38" height="38" xlink:href="./video-player.svg"></image>
+		<text id="card7-text" x="230" y="190" text-anchor="middle">Video Editor</text>
+
+		<rect id="card8" x="305" y="124" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card8-image" x="340" y="135" width="38" height="38" xlink:href="./webpage.svg"></image>
+		<text id="card8-text" x="360" y="190" text-anchor="middle">Site Production</text>
+
+		<!-- Row 3 -->
+		<rect id="card02" x="-210" y="220" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card02-image" x="-175" y="230" width="38" height="38" xlink:href="./webpage.svg"></image>
+		<text id="card02-text" x="-160" y="288" text-anchor="middle">Director, Sites</text>
+
+		<rect id="card9" x="-80" y="220" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card9-image" x="-45" y="230" width="38" height="38" xlink:href="./image.svg"></image>
+		<text id="card9-text" x="-30" y="288" text-anchor="middle">Photo Desk</text>
+
+		<rect id="card10" x="45" y="220" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card10-image" x="80" y="230" width="38" height="38" xlink:href="./tv-ads.svg"></image>
+		<text id="card10-text" x="95" y="288" text-anchor="middle">Prime</text>
+
+		<rect id="card11" x="175" y="220" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card11-image" x="210" y="230" width="38" height="38" xlink:href="./market-data.svg"></image>
+		<text id="card11-text" x="230" y="288" text-anchor="middle">Data Journalism</text>
+
+		<rect id="card12" x="305" y="220" width="105" height="80" style="filter:url(#dropshadow)"/>
+		<image id="card12-image" x="340" y="230" width="38" height="38" xlink:href="./report.svg"></image>
+		<text id="card12-text" x="360" y="288" text-anchor="middle">Strategic Content</text>
+
+
+</svg>

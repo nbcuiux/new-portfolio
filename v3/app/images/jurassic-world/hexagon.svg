@@ -1,0 +1,80 @@
+<svg version="1.1" class="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+	<style type="text/css">
+
+
+		.svg {
+		display: block;
+		padding: 0px;
+		clear: both;
+		transform: rotate(90deg) translate(0, 50%) scale(1.2, 1.5);
+		transform-origin: center center;
+		}
+
+		.animation {
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 0;
+		stroke: #46b3e3;
+		fill: rgba(20, 43, 67, 0.5);
+		stroke-width: 1px;
+		}
+
+		.hex-beam {
+		stroke: #FFF;
+		stroke-width: 1px;
+		fill: none;
+		stroke-dasharray: 40, 4000;
+		-webkit-animation: hex-beam 3s linear infinite;
+		-moz-animation: hex-beam 3s linear infinite;
+		animation: hex-beam 3s linear infinite;
+		}
+
+		@-webkit-keyframes dash {
+		to {
+		stroke-dashoffset: 0;
+		}
+		}
+
+		@keyframes dash {
+		to {
+		stroke-dashoffset: 0;
+		}
+		}
+
+		@-webkit-keyframes hex-beam {
+		0% {
+		stroke-dashoffset: 0px; 
+		}
+		100% {
+		stroke-dashoffset: 4000px; 
+		} 
+		}
+
+		@-moz-keyframes hex-beam {
+		0% {
+		stroke-dashoffset: 0px; 
+		}
+		100% {
+		stroke-dashoffset: 4000px; 
+		}
+		 }
+
+		@keyframes hex-beam {
+		0% {
+		stroke-dashoffset: 0px; }
+		100% {
+		stroke-dashoffset: 4000px; } 
+		}
+
+
+	</style>
+	<g >
+		<polygon class="animation" stroke-miterlimit="0" points="17.247,187.211 17.247,62.789 125,0.577 232.753,62.789 232.753,187.211 125,249.423"/>
+		<path style="fill:transparent;" d="M125,1.155l107.253,61.923l0,123.845L125,248.845L17.747,186.923l0-123.845L125,1.155 M125,0 L16.747,62.5l0,125L125,250l108.253-62.5l0-125L125,0L125,0z"/>
+	</g>
+	<g >
+		<polygon class="hex-beam" stroke-miterlimit="0" points="17.247,187.211 17.247,62.789 125,0.577 232.753,62.789 232.753,187.211 125,249.423"/>
+		<path style="fill:transparent;" d="M125,1.155l107.253,61.923l0,123.845L125,248.845L17.747,186.923l0-123.845L125,1.155 M125,0 L16.747,62.5l0,125L125,250l108.253-62.5l0-125L125,0L125,0z"/>
+	</g>
+	<!-- <image style="overflow:visible;" width="1035" height="1035" xlink:href="stegosaurus-1.png" x="0" y="0"></image> -->
+</svg>

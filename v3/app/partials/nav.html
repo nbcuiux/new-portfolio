@@ -1,0 +1,296 @@
+<nav class="fh5co-nav">
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <span href="#" ng-hide="$state.includes('preloader')" ng-click="burgerMenu()" class="js-fh5co-nav-toggle fh5co-nav-toggle">
+        <span class="nav-section">
+          <span ng-show="$state.includes('home')">H</span>
+          <span ng-show="$state.includes('american-made')">W1</span>
+          <span ng-show="$state.includes('cnbc')">W2</span>
+          <span ng-show="$state.includes('rationalized')">W3</span>
+          <span ng-show="$state.includes('syfy')">W4</span>
+          <span ng-show="$state.includes('jurassic-world')">W5</span>
+          <span ng-show="$state.includes('universal-kids')">W6</span>
+          <span ng-show="$state.includes('lorax')">W7</span>
+          <span ng-show="$state.includes('mvpd')">W8</span>
+          <span ng-show="$state.includes('chiller')">W9</span>
+          <span ng-show="$state.includes('concerto')">W10</span>
+          <span ng-show="$state.includes('about')">A</span>
+        </span>
+        <div class="lines"></div>
+        <div class="nav-numbers-list">
+          <!-- <a ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]" href="#project-{{i}}" du-scrollspy="project-{{i}}" class="nav-number">{{i + 1}}</a> -->
+          <a href="#project-0" du-scrollspy="project-0" class="nav-number">1</a>
+          <a href="#project-1" du-scrollspy="project-1" class="nav-number">2</a>
+          <a href="#project-2" du-scrollspy="project-2" class="nav-number">3</a>
+          <a href="#project-3" du-scrollspy="project-3" class="nav-number">4</a>
+          <a href="#project-4" du-scrollspy="project-4" class="nav-number">5</a>
+          <a href="#project-5" du-scrollspy="project-5" class="nav-number">6</a>
+          <a href="#project-6" du-scrollspy="project-6" class="nav-number">7</a>
+          <a href="#project-7" du-scrollspy="project-7" class="nav-number">8</a>
+          <a href="#project-8" du-scrollspy="project-8" class="nav-number">9</a>
+          <a href="#project-9" du-scrollspy="project-9" class="nav-number">10</a>
+          <a href="#project-10" du-scrollspy="project-10" class="nav-number">11</a>
+          <a href="#project-11" du-scrollspy="project-11" class="nav-number">12</a>
+          <a href="#project-12" du-scrollspy="project-12" class="nav-number">13</a>
+          <a href="#project-13" du-scrollspy="project-13" class="nav-number">14</a>
+          <a href="#project-14" du-scrollspy="project-14" class="nav-number">15</a>
+        </div>
+      </span>
+    </div>
+    <div class="col-xs-6 text-right">
+      <a href="/home">
+        <svg class="logo" width="100%" height="100%" viewBox="0 0 243 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="nbc">
+            <path d="M131.716,73.4343 L82.196,149.9873 C76.422,151.1373 70.124,151.7123 63.302,151.7123 C42.949,151.7123 27.312,146.5053 16.387,136.0913 C5.462,125.6773 0,110.7043 0,91.1663 L0,0.3993 L40.533,0.3993 L40.533,88.0013 C40.533,98.5533 42.507,106.2103 46.455,110.9743 C50.403,115.7403 56.222,118.1223 63.914,118.1223 C72.15,118.1223 78.122,115.7573 81.833,111.0263 C85.542,106.2953 87.398,98.5533 87.398,87.7973 L87.398,5.1013 L131.716,73.4343 Z" id="Combined-Shape" fill="#333031"></path>
+            <path d="M213.344318,147.624678 L243.010243,147.624678 L193.278369,76.0227629 L239.515031,1.62467812 L194.476727,1.62467812 L169.111474,46.762845 L142.747589,1.62467812 L99.0075072,1.62467812 L144.545127,72.9270037 L96.1114744,147.624678 L123.844532,147.624678 C120.046699,146.398854 116.682713,143.076779 115.5929,139.2317 C114.1989,134.6027 115.5509,129.8217 118.6159,126.4477 C121.5759,123.3977 125.3809,122.1227 129.6099,122.5987 C125.6349,119.8937 123.9639,115.4167 124.5359,110.6137 C125.0649,106.4407 128.0869,102.3737 131.9559,100.7087 C136.3739,98.7187 141.9539,99.8007 145.4209,103.1517 C144.7019,100.7087 144.3229,97.2047 145.3159,94.6947 C146.4989,90.7367 150.3459,87.2117 154.2569,86.3897 C159.4789,85.2657 164.4469,87.2327 167.4479,91.7107 C168.0189,92.5547 168.3579,93.5067 168.8009,94.3937 C170.3019,90.1097 174.6349,86.5617 179.0329,86.1077 C183.5769,85.5237 187.8689,87.4707 190.7229,91.2997 C192.9429,94.4787 193.7029,99.2157 192.2659,103.0447 L192.4359,103.0447 C195.7319,100.0817 200.7219,98.9997 204.9709,100.6437 C209.0299,101.9847 212.4749,106.3107 213.0249,110.5717 C213.6369,115.2867 212.0309,119.4187 208.4589,122.4687 C213.8699,122.1437 219.0059,125.0197 221.2259,130.0607 C223.1719,134.4517 222.6019,140.3347 219.3029,143.9037 C217.9719,145.2447 216.5549,146.3687 214.9699,147.0397 C214.444343,147.272549 213.901946,147.466791 213.344318,147.624678 Z" id="Combined-Shape" fill="#333031"></path>
+            <path d="M177.99401,139.171923 L187.01611,117.895396 L191.296305,107.986671 C193.030552,104.784498 196.294812,102.743524 199.856696,102.686373 C203.270204,102.686373 206.295317,104.316035 208.214597,107.23765 C210.189736,110.159265 210.299709,114.935681 208.325442,117.895396 C207.440427,119.280869 206.130359,120.516537 204.783633,121.397178 L177.99401,139.171923 Z" id="Fill-1" fill="#0089CF" transform="translate(193.873107, 120.929148) rotate(1.000000) translate(-193.873107, -120.929148) "></path>
+            <path d="M174.616959,92.0116647 C171.558156,93.9669499 169.974695,97.2178754 170.207958,100.799046 C170.207958,100.799046 170.82091,104.69019 170.982662,106.206275 L174.868951,131.053177 L175.445296,134.359002 L188.367527,104.050816 C188.888536,102.826968 189.12265,101.420683 189.139677,100.049872 C189.086043,96.3411644 186.692975,92.7059388 183.255333,91.3173907 C180.610272,90.0749611 176.993001,90.4769982 174.616959,92.0116647 Z" id="Fill-3" fill="#635FAA" transform="translate(179.662540, 112.471012) rotate(2.000000) translate(-179.662540, -112.471012) "></path>
+            <path d="M159.843904,90.6283763 C156.238341,89.7043476 152.740016,90.8637817 150.259186,93.5998451 C147.938791,96.2094096 147.367136,100.450057 148.724078,103.674523 L161.344392,133.80892 L166.73416,101.191458 C166.804245,99.923955 166.85913,98.5291156 166.501952,97.3688437 C165.751285,94.270876 162.895544,91.371453 159.843904,90.6283763 Z" id="Fill-5" fill="#CE1041"></path>
+            <path d="M128.069792,112.256919 C128.451247,108.717049 131.266626,105.251336 134.626697,104.181618 C138.076976,103.112753 141.835683,103.960856 144.342634,106.523063 C145.395932,107.519477 146.049732,108.69915 146.593563,109.915474 L158.999447,139.709871 L131.502888,121.050762 C128.869645,118.783473 127.689196,115.760136 128.069792,112.256919 Z" id="Fill-7" fill="#F36F21"></path>
+            <path d="M120.026148,140.359528 C118.334618,137.098414 118.774842,132.46968 121.048003,129.577382 C123.524823,126.632144 127.110653,125.150702 130.721385,125.876865 C132.193248,126.113331 133.427656,126.741554 134.588248,127.46507 L162.2228,145.897952 L127.986656,145.890893 C124.43462,145.491195 121.696334,143.591525 120.026148,140.359528 Z" id="Fill-9" fill="#FDB813"></path>
+            <path d="M217.864052,139.549136 C219.46211,136.468229 219.046212,132.095275 216.899505,129.362803 C214.558712,126.580318 211.171032,125.180739 207.758986,125.866774 C206.369298,126.090173 205.203103,126.683681 204.105804,127.367216 L178,144.781509 L210.343437,144.774841 C213.700869,144.397229 216.28616,142.602534 217.864052,139.549136 Z" id="Fill-12" fill="#0CB14B"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+</nav>
+<nav id="fh5co-offcanvas">
+  <div id="nav-progress-bar"
+  ng-class="{ 
+    height8: ctrl.isVisible1,
+    height16: ctrl.isVisible2,
+    height24: ctrl.isVisible3,
+    height32: ctrl.isVisible4,
+    height40: ctrl.isVisible5,
+    height48: ctrl.isVisible6,
+    height56: ctrl.isVisible7, 
+    height70: ctrl.isVisible8,
+    height64: ctrl.isVisible9,
+    height72: ctrl.isVisible10,
+    height80: ctrl.isVisible11, 
+    height99: ctrl.isVisible12,
+  }"
+  >
+  <div class="progress-number progress-number--current" 
+  ng-bind="
+  (ctrl.isVisible12)?'12':
+  (ctrl.isVisible11)?'11':
+  (ctrl.isVisible10)?'10':
+  (ctrl.isVisible9)?'9':
+  (ctrl.isVisible8)?'8':
+  (ctrl.isVisible7)?'7':
+  (ctrl.isVisible6)?'6':
+  (ctrl.isVisible5)?'5':
+  (ctrl.isVisible4)?'4':
+  (ctrl.isVisible3)?'3':
+  (ctrl.isVisible2)?'2':
+  (ctrl.isVisible1)?'1':'0'">
+  </div>
+  <div class="progress-line">
+    <div class="progress-line progress-line--background"></div>
+    <div class="progress-line progress-line--foreground" 
+    ng-class="{ 
+    height8: ctrl.isVisible1,
+    height16: ctrl.isVisible2,
+    height24: ctrl.isVisible3,
+    height32: ctrl.isVisible4,
+    height40: ctrl.isVisible5,
+    height48: ctrl.isVisible6,
+    height56: ctrl.isVisible7, 
+    height70: ctrl.isVisible8,
+    height64: ctrl.isVisible9,
+    height72: ctrl.isVisible10,
+    height80: ctrl.isVisible11, 
+    height99: ctrl.isVisible12,
+    }"
+    ></div>
+  </div>
+  <div class="progress-number progress-number--total">12</div>
+</div>
+
+<div id="menu-list" change-on-scroll offset="500" scroll-class="scrolling" >
+  <ul>
+    <li ng-class="{ 'active1' : home === true} " id="home">
+      <a href="/home" in-view="ctrl.isVisible1 = $inview" ng-class="{ active: ctrl.isVisible1}"  >
+        <span id="top-home" style=" top:0px">H</span>
+        <span>o</span>
+        <span>m</span>
+        <span>e</span>
+      </a>
+    </li>
+
+    <li ng-class="{ 'active1' : american === true} " id="american">
+      <a href="/american-made" in-view="ctrl.isVisible2 = $inview" ng-class="{ active: ctrl.isVisible2}" >
+        <span id="top-american"  style="top:500px">A</span>
+        <span>m</span>
+        <span>e</span>
+        <span>r</span>
+        <span>i</span>
+        <span>c</span>
+        <span>a</span>
+        <span>n</span>
+        <span>&nbsp;</span>
+        <span>M</span>
+        <span>a</span>
+        <span>d</span>
+        <span>e</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="//content-commerce.nbcuxlab.com" target="_blank" in-view="ctrl.isVisible3 = $inview" ng-class="{ active: ctrl.isVisible3}" >
+        <span>C</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>e</span>
+        <span>n</span>
+        <span>t</span>
+        <span>&nbsp;</span>
+        <span>C</span>
+        <span>o</span>
+        <span>m</span>
+        <span>m</span>
+        <span>e</span>
+        <span>r</span>
+        <span>c</span>
+        <span>e</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="//brandedcontent.nbcuxlab.com/" target="_blank" in-view="ctrl.isVisible4 = $inview" ng-class="{ active: ctrl.isVisible4}" >
+        <span>V</span>
+        <span>.</span>
+        <span>a</span>
+        <span>i</span>
+      </a>
+    </li>
+
+    <li ng-class="{ 'active1' : cnbc === true} " id="cnbc">
+      <a href="/cnbc" in-view="ctrl.isVisible5 = $inview" ng-class="{ active: ctrl.isVisible5}" >
+        <span id="top-cnbc" style=" top:1000px">C</span>
+        <span>N</span>
+        <span>B</span>
+        <span>C</span>
+      </a>
+    </li>
+
+    <li ng-class="{ 'active1' : rationalized === true} " id="rationalized">
+      <a href="/rationalized" in-view="ctrl.isVisible6 = $inview" ng-class="{ active: ctrl.isVisible6}" >
+        <span id="top-rationalized" style=" top:1500px">R</span>
+        <span>a</span>
+        <span>t</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+        <span>a</span>
+        <span>l</span>
+        <span>i</span>
+        <span>z</span>
+        <span>e</span>
+        <span>d</span>
+      </a>
+    </li>
+    <li ng-class="{ 'active1' : syfy === true} " id="syfy">
+      <a href="/syfy" in-view="ctrl.isVisible7 = $inview" ng-class="{ active: ctrl.isVisible7}" >
+        <span id="top-syfy" style=" top:2000px">M</span>
+        <span>o</span>
+        <span>b</span>
+        <span>i</span>
+        <span>l</span>
+        <span>e</span>
+        <span>&nbsp;</span>
+        <span>A</span>
+        <span>n</span>
+        <span>a</span>
+        <span>l</span>
+        <span>y</span>
+        <span>s</span>
+        <span>i</span>
+        <span>s</span>
+  
+      </a>
+    </li>
+    <li ng-class="{ 'active1' : jurassic === true} " id="jurassic">
+      <a href="/jurassic-world" in-view="ctrl.isVisible8 = $inview" ng-class="{ active: ctrl.isVisible8}" >
+        <span id="top-jurassic" style=" top:2500px">J</span>
+        <span>u</span>
+        <span>r</span>
+        <span>a</span>
+        <span>s</span>
+        <span>s</span>
+        <span>i</span>
+        <span>c</span>
+        <span>&nbsp;</span>
+        <span>W</span>
+        <span>o</span>
+        <span>r</span>
+        <span>l</span>
+        <span>d</span>
+      </a>
+    </li>
+    <li ng-class="{ 'active1' : universal === true} " id="universal">
+      <a href="/universal-kids" in-view="ctrl.isVisible9 = $inview" ng-class="{ active: ctrl.isVisible9}" >
+        <span id="top-universal" style=" top:3000px">U</span>
+        <span>n</span>
+        <span>i</span>
+        <span>v</span>
+        <span>e</span>
+        <span>r</span>
+        <span>s</span>
+        <span>a</span>
+        <span>l</span>
+        <span>&nbsp;</span>
+        <span>K</span>
+        <span>i</span>
+        <span>d</span>
+        <span>s</span>
+      </a>
+    </li>
+    <li ng-class="{ 'active1' : lorax === true} " id="lorax">
+      <a href="/lorax" in-view="ctrl.isVisible9 = $inview" ng-class="{ active: ctrl.isVisible9}" >
+        <span id="top-lorax" style=" top:3500px">L</span>
+        <span>o</span>
+        <span>r</span>
+        <span>a</span>
+        <span>x</span>
+      </a>
+    </li>
+     <li ng-class="{ 'active1' : mvpd === true} " id="mvpd">
+      <a href="/mvpd" in-view="ctrl.isVisible10 = $inview" ng-class="{ active: ctrl.isVisible10}" >
+        <span id="top-mvpd" style=" top:4000px">M</span>
+        <span>V</span>
+        <span>P</span>
+        <span>D</span>
+      </a>
+    </li>
+    <li ng-class="{ 'active1' : chiller === true} " id="chiller">
+      <a href="/chiller" in-view="ctrl.isVisible11 = $inview" ng-class="{ active: ctrl.isVisible11 }">
+        <span id="top-chiller" style=" top:4500px">C</span>
+        <span>h</span>
+        <span>i</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+      </a>
+    </li>
+    <li ng-class="{ 'active1' : concerto === true} " id="concerto">
+      <a href="/concerto" in-view="ctrl.isVisible12 = $inview" ng-class="{ active: ctrl.isVisible12 }">
+        <span id="top-concerto" style=" top:5000px">C</span>
+        <span>o</span>
+        <span>n</span>
+        <span>c</span>
+        <span>e</span>
+        <span>r</span>
+        <span>t</span>
+        <span>o</span>
+      </a>
+    </li>
+  </ul>
+</div>
+</nav>

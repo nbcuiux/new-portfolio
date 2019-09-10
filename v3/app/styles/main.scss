@@ -1,0 +1,1178 @@
+// Import
+@import 'animate';
+
+@import 'bootstrap';
+@import 'bootstrap/mixins';
+@import 'bootstrap/variables';
+
+@import 'functions';
+@import 'fonts';
+@import 'colors';
+@import 'zindex';
+@import 'motion';
+
+@import 'mixins';
+@import 'buttons';
+
+@import 'page-wipe';
+@import 'preloader';
+
+@import 'image-layering';
+
+@import 'footer-about';
+
+@import 'process';
+
+@import 'landing';
+
+$grid-gutter-width: 40px !default;
+$border-radius-base:  4px !default;
+$padding-base-vertical: 14px !default;
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-y: scroll;
+  color: _palette($theme,brand-black);
+  background: lighten(_palette($theme,brand-black), 80%);
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+#page {
+  -webkit-overflow-scrolling: touch;
+  // position: relative;
+  overflow-x: hidden;
+  background: lighten(_palette($theme,brand-black), 80%);
+
+  @import 'nav-fullscreen';
+  @import 'nav-progress-bar';
+
+  // @media
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, figure {
+  color: _palette($theme,brand-black);
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+}
+::-webkit-selection {
+  color: _palette($theme,brand-white);
+  background: _palette($theme, brand-primary);
+}
+
+::-moz-selection {
+  color: _palette($theme,brand-white);
+  background: _palette($theme, brand-primary);
+}
+::selection {
+  color: _palette($theme,brand-white);
+  background: _palette($theme, brand-primary);
+}
+
+.fullWidthCodepen {
+  .cp_embed_wrapper {
+    iframe {
+      pointer-events: none;
+      position: fixed;
+      width: 100%;
+      height: calc(100% + 54px);
+      @include translateY(-54px);
+      overflow-y: hidden;
+    }
+  }
+}
+
+.hideCodepenUi {
+  .cp_embed_wrapper {
+    overflow: hidden;
+    pointer-events: none
+  }
+  iframe {
+    width: 100%;
+    overflow: hidden;
+    @include translateY(-54px);
+    border: 1px solid rgb(238, 238, 238);
+  }
+}
+
+.fh5co-nav {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding: 1.5em 0;
+  z-index: 2001;
+
+  background: transparent;
+  @include transition(all .5s ease);
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 1em 0;
+  }
+
+  #fh5co-logo {
+    font-size: 24px;
+    // margin: 0 0 2em 0;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    @media screen and (max-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+    a {
+      > span {
+        color: _palette($theme, brand-primary);
+      }
+    }
+  }
+
+  .menu-1 {
+    display: none;
+    @media screen and (max-width: $screen-sm ) {
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 7px 0 0 0;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: inline;
+      a {
+        font-size: 16px;
+        padding: 30px 10px;
+        color: rgba(255,255,255,.5);
+        @include transition(all .5s ease);
+        &:hover,&:focus, &:active {
+          color: rgba(255,255,255,1);
+        }
+      }
+      &.has-dropdown {
+        position: relative;
+
+        .dropdown {
+          width: 130px;
+          -webkit-box-shadow: 0px 8px 13px -9px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 8px 13px -9px rgba(0,0,0,0.75);
+          box-shadow: 0px 8px 13px -9px rgba(0,0,0,0.75);
+          z-index: 1002;
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: 40px;
+          left: 0;
+          text-align: left;
+          background: _palette($theme,brand-white);
+          padding: 20px;
+          @include border-radius(4px);
+          @include transition(all 0s ease);
+
+          &:hover, &:focus {
+            display: block;
+          }
+
+          &:before {
+            bottom: 100%;
+            left: 40px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-bottom-color: #fff;
+            border-width: 8px;
+            margin-left: -8px;
+          }
+
+          li {
+            display: block;
+            margin-bottom: 7px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            a {
+              padding: 2px 0;
+              display: block;
+              color: lighten(_palette($theme,brand-black), 60%);
+              line-height: 1.2;
+              text-transform: none;
+              font-size: 15px;
+              &:hover {
+                color: _palette($theme,brand-black);
+              }
+            }
+          }
+        }
+        &:hover, &:focus {
+          a {
+            color: _palette($theme,brand-white);
+          }
+          .dropdown {
+            // visibility: visible;
+            // opacity: 1;
+          }
+        }
+      }
+
+      &.active {
+        > a {
+          color: _palette($theme,brand-white);
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .scrolled & {
+    // background: _palette($theme,brand-white);
+
+    // padding: 10px 0;
+    // -webkit-box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.15);
+    // -moz-box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.15);
+    // box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.15);
+
+    a {
+      color: _palette($theme,brand-black);
+    }
+    ul {
+      li {
+        a {
+          &:hover, &:focus, &:active {
+            color: _palette($theme, brand-primary)!important;
+          }
+        }
+        &.active {
+          a {
+            color: _palette($theme, brand-primary);
+          }
+        }
+        &.has-dropdown {
+          &:hover, &:focus {
+            > a {
+              color: _palette($theme, brand-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+a {
+  &:hover, &:active, &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+#fh5co-header,
+#fh5co-counter,
+.fh5co-bg {
+  background-position: center center;
+  position: relative;
+  background-size: intial;
+  // background-attachment: fixed;
+
+  &.percent {
+    background-size: 75%;
+    @media screen and (max-width: $screen-sm) {
+      background-size: cover;
+    }
+  }
+
+  &.full-bleed {
+    background-size: 102%;
+
+    @media screen and (max-width: $screen-sm) {
+      background-size: cover;
+    }
+  }
+
+  &.contain {
+    background-size: contain;
+  }
+  &.repeat {
+    background-repeat: repeat;
+  }
+  &.right {
+    background-position: right center;
+    background-size: contain;
+  }
+  &.left {
+    background-position: left center;
+    background-size: contain;
+  }
+
+  .overlay {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(darken(_palette($theme, brand-black), 10%), .9);
+    @include transition(background-color _animation(duration) _animation(easing2));
+  }
+}
+
+.fh5co-bg {
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.fh5co-cover {
+  height: calc(100vh - 82px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  width: 100%;
+
+  > .fh5co-container {
+    position: relative;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    height: 80vh;
+  }
+
+  .display-t,
+  .display-tc {
+    z-index: 9;
+    height: calc(100vh - 82px);
+    display: table;
+    width: 100%;
+
+    @media screen and (max-width: $screen-sm) {
+      height: 80vh;
+    }
+  }
+
+  &.fh5co-cover-sm {
+    height: 80vh;
+
+    @media screen and (max-width: $screen-sm) {
+      height: 70vh;
+    }
+
+    .display-t,
+    .display-tc {
+      height: 80vh;
+      display: table;
+      width: 100%;
+
+      @media screen and (max-width: $screen-sm) {
+        height: 70vh;
+      }
+    }
+  }
+}
+
+
+.pagination {
+  a {
+    background: none;
+    border: none!important;
+    color: lighten(_palette($theme,brand-black), 50%)!important;
+    &:hover, &:focus, &:active {
+      background: none!important;
+    }
+  }
+  > li {
+    > a {
+      margin: 0 2px;
+      font-size: 18px;
+      padding: 0!important;
+      background: none;
+      -webkit-border-radius: 50%!important;
+      -moz-border-radius: 50%!important;
+      -ms-border-radius: 50%!important;
+      -o-border-radius: 50%!important;
+      border-radius: 50%!important;
+
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      display: table-cell;
+      vertical-align: middle;
+      &:hover {
+        color: _palette($theme,brand-black);
+        background: lighten(_palette($theme,brand-black), 90%)!important;
+      }
+    }
+    &.disabled {
+      > a {
+        background: none;
+      }
+    }
+    &.active {
+      > a {
+        background: _palette($theme, brand-primary)!important;
+        -webkit-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+        -moz-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+        -ms-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+        -o-box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+        box-shadow: 4px 11px 35px -14px rgba(0,0,0,.5);
+        color: _palette($theme, brand-white) !important;
+        &:hover {
+          cursor: pointer;
+          background: lighten(_palette($theme, brand-primary), 10%)!important;
+        }
+      }
+    }
+  }
+
+}
+
+
+.fh5co-social-icons {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include inline-block;
+    a {
+      @include inline-block;
+      color: _palette($theme, brand-primary);
+      padding-left: 10px;
+      padding-right: 10px;
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.fh5co-contact-info {
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0 0 0 70px;
+      margin: 0 0 30px 0;
+      list-style: none;
+      position: relative;
+      &:before {
+        color: darken(#f0f5f9, 10%);
+        position: absolute;
+        left: 0;
+        top: .05em;
+        @include icomoon;
+      }
+      &.address {
+        &:before {
+          font-size: 30px;
+          content: "\e9d1";
+        }
+      }
+      &.phone {
+        &:before {
+          font-size: 23px;
+          content: "\e9f4";
+        }
+      }
+      &.email {
+        &:before {
+          font-size: 23px;
+          content: "\e9da";
+        }
+      }
+      &.url {
+        &:before {
+          font-size: 23px;
+          content: "\e9af";
+        }
+      }
+    }
+  }
+}
+
+
+#fh5co-header,
+#fh5co-counter,
+.fh5co-cover {
+  .display-tc {
+    display: table-cell !important;
+    vertical-align: middle;
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+      color: _palette($theme,brand-white);
+    }
+    .x-glyph {
+      @include x-glyph();
+    }
+    // &.white {
+    //   color: _palette($theme,brand-white);
+    // }
+    h1 {
+      @include headingJumbo();
+    }
+
+    h2 {
+      @include heading2();
+    }
+    h3 {
+      @include heading3();
+    }
+    p {
+      @media screen and (max-width: $screen-sm) {
+        display: none;
+      }
+      .btn {
+        margin: 0;
+        padding: 15px 30px;
+        background: transparent;
+        color: _palette($theme,brand-white);
+        border: solid 1px _palette($theme,brand-white);
+        font-size: 18px;
+        @include border-radius(0px);
+
+        &:hover {
+          border-color: _palette($theme, brand-primary);
+        }
+      }
+      .or {
+        color: rgba(_palette($theme, brand-black), 0.3);
+        @include inline-block;
+        padding: 0 20px;
+
+      }
+      a {
+        padding: 15px 30px;
+        color: rgba(_palette($theme, brand-black), .5);
+        border-bottom: 1px solid rgba(_palette($theme, brand-black), .5);
+
+        &:hover {
+          color: rgba(_palette($theme, brand-black), 1);
+          border-bottom: 1px solid rgba(_palette($theme, brand-black), 1);
+        }
+      }
+    }
+
+    .form-inline {
+      .form-group {
+        width: 100%!important;
+        margin-bottom: 10px;
+        .form-control {
+          width: 100%;
+          background: _palette($theme,brand-white);
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+.fh5co-bg-section {
+  background: _palette($theme,brand-light-gray);
+}
+
+#fh5co-services,
+#fh5co-started,
+#fh5co-testimonial,
+#fh5co-blog,
+#fh5co-project,
+#fh5co-about,
+#fh5co-team,
+#fh5co-contact,
+#fh5co-footer {
+
+}
+
+#fh5co-testimonial {
+  background: #F0F5F9;
+  .testimonial {
+    background: _palette($theme,brand-white);
+    padding: 30px;
+    position: relative;
+    margin-bottom: 4em;
+    bottom: 0;
+    blockquote {
+      border-left: none;
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      color: lighten(_palette($theme,brand-black), 40%);
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.5;
+      &.author {
+        color: lighten(_palette($theme,brand-black), 70%);
+
+        img {
+          width: 60px;
+          margin-right: 20px;
+          @include border-radius(50%);
+        }
+        cite {
+          font-style: normal;
+          font-size: 13px;
+          font-family: $font-primary;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:after {
+      position: absolute;
+      left: 11%;
+      bottom: -30px;
+      display: block;
+      width: 0;
+      content: "";
+      border-width: 30px 30px 0 0;
+      border-style: solid;
+      border-color: #fff transparent;
+    }
+
+    &.fh5co-selected {
+      background: _palette($theme, brand-primary);
+
+      bottom: 10px;
+      -webkit-box-shadow: 0px 18px 71px -10px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 18px 71px -10px rgba(0,0,0,0.75);
+      box-shadow: 0px 18px 71px -10px rgba(0,0,0,0.75);
+
+      p {
+        color: _palette($theme,brand-white);
+        &.author {
+          cite {
+            color: rgba(255,255,255,.7);
+          }
+        }
+      }
+
+      &:after {
+        border-color: _palette($theme, brand-primary) transparent;
+      }
+
+      @media screen and (max-width: $screen-sm) {
+        bottom: 0;
+      }
+
+    }
+  }
+}
+#fh5co-blog {
+  .fh5co-post {
+    background: _palette($theme,brand-white);
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px;
+    -webkit-box-shadow: -2px 11px 24px -10px rgba(0,0,0,0.09);
+    -moz-box-shadow: -2px 11px 24px -10px rgba(0,0,0,0.09);
+    box-shadow: -2px 11px 24px -10px rgba(0,0,0,0.09);
+    position: relative;
+    bottom: 0;
+    @include transition(all .3s ease);
+    h3 {
+      margin-bottom: 20px;
+      a {
+        color: _palette($theme, brand-primary);
+        &:hover {
+          color: _palette($theme, brand-secondary);
+        }
+      }
+    }
+    .fh5co-date {
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: lighten(_palette($theme,brand-black), 80%);
+      letter-spacing: .07em;
+    }
+    p {
+      &.author {
+        color: lighten(_palette($theme,brand-black), 70%);
+        img {
+          width: 50px;
+          margin-right: 10px;
+          @include border-radius(50%);
+        }
+        cite {
+          font-style: normal;
+          font-size: 13px;
+        }
+
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:hover, &:focus {
+      bottom: 10px;
+      @media screen and (max-width: $screen-sm) {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+#fh5co-counter {
+  background: _palette($theme,brand-white);
+  padding: 7em 0;
+  text-align: center;
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+  .counter {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: _palette($theme, brand-primary);
+    font-weight: 100;
+    display: block;
+  }
+  .counter-label {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.5);
+    letter-spacing: .1em;
+  }
+
+  .feature-center {
+    &:hover {
+      .counter {
+        color: _palette($theme,brand-white);
+      }
+    }
+    @media screen and (max-width: $screen-sm) {
+      margin-bottom: 30px;
+    }
+  }
+  .icon {
+    width: 70px;
+    // height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: none!important;
+    border: none!important;
+    i {
+      height: 70px;
+      &:before {
+        color: lighten(_palette($theme,brand-black), 80%);
+        display: block;
+        text-align: center;
+        margin-left: 3px;
+      }
+    }
+  }
+}
+#fh5co-next-case-study {
+  &.fh5co-next-case-study {
+    @include translate3d(0,0,0);
+    @include transition(transform _animation(duration) _animation(easing2));
+
+    i {
+      opacity: 0;
+      @include translate3d(-50%,0,0);
+      $transition: opacity _animation(duration) _animation(easing2), transform _animation(duration) _animation(easing2);
+      @include transition($transition);
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      width: 100%;
+      height: 20px;
+      @include translate3d(0,0,0);
+      $transition: background-color _animation(duration) _animation(easing2), transform _animation(duration) _animation(easing2);
+      @include transition($transition);
+    }
+    &:hover {
+      @include translate3d(0,-20px,0);
+
+      &:after {
+        @include translate3d(0,20px,0);
+        background-color: rgba(darken(_palette($theme, brand-black), 10%), 1);
+      }
+
+      .overlay {
+        background-color: rgba(darken(_palette($theme, brand-black), 10%), 1);
+      }
+
+      i {
+        opacity: 1;
+        @include translate3d(0,0,0);
+      }
+    }
+
+  }
+}
+#fh5co-project {
+  .fh5co-project {
+    margin-bottom: 30px;
+    h2 {
+      font-size: 48px;
+      font-weight: 600;
+    }
+
+    > a {
+      display: block;
+      color: _palette($theme,brand-black);
+      position: relative;
+      bottom: 0;
+      overflow: hidden;
+
+      .img-wrapper {
+        overflow: hidden;
+        @include scale(1,1);
+        @include transition(transform _animation(duration) _animation(easing1));
+
+        img {
+          position: relative;
+          width: 100%;
+          // transform-origin: bottom;
+          @include transition(transform _animation(duration) _animation(easing1));
+          @include transition-delay(0.09s);
+
+        }
+      }
+
+
+      .fh5co-copy {
+        z-index: 12;
+        position: relative;
+        padding: 3em 0px;
+        text-align: left;
+        // @include border-radius(0 0 5px 5px);
+        @include transition(all .5s _animation(easing));
+        // @include translateY(100%);
+
+        &--black {
+          background: darken(_palette($theme,brand-black),10%);
+
+          h3, span, p, i {
+            color: lighten(_palette($theme,brand-white), 0%);
+          }
+        }
+        &--white {
+          background: _palette($theme,brand-white);
+
+          h3, i {
+            color: lighten(_palette($theme,brand-black), 0%);
+          }
+          span, p {
+            color: lighten(_palette($theme,brand-black), 25%);
+          }
+        }
+        h3 {
+          margin: 0 0 5px 0;
+          padding: 0;
+          @include heading3();
+        }
+        h4 {
+          margin: 0 0 5px 0;
+          @include heading4();
+        }
+        span {
+          @include body1();
+        }
+        p {
+          @include body1();
+        }
+
+        @media screen and (max-width: $screen-sm ) {
+          position: relative;
+          visibility: visible;
+          opacity: 1;
+          bottom: 0;
+        }
+      }
+      &:hover {
+        .img-wrapper {
+          @include scale(0.97,0.97);
+
+          img {
+            @include scale(1.05,1.05);
+
+            &:after {
+              opacity: 1;
+              visibility: visible;
+              @media screen and (max-width: $screen-sm ) {
+                opacity: 0;
+                visibility: hidden;
+              }
+            }
+
+            @media screen and (max-width: $screen-sm ) {
+              @include scale(1, 1);
+            }
+          }
+        }
+
+        @media screen and (max-width: $screen-sm ) {
+          bottom: 0;
+        }
+
+        .fh5co-copy {
+          opacity: 1;
+          visibility: visible;
+          span {
+            text-decoration: underline;
+          }
+
+          @media screen and (max-width: $screen-sm ) {
+            bottom: 0;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+@import 'section';
+
+@import 'logo';
+@import 'timeline';
+
+
+#fh5co-footer {
+  // background: #efefef;
+  .fh5co-footer-links {
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      a {
+        color: _palette($theme,brand-black);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .fh5co-widget {
+    margin-bottom: 30px;
+    @media screen and (max-width: $screen-sm){
+      text-align: left;
+    }
+    h3 {
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .copyright {
+    .block {
+      display: block;
+    }
+  }
+}
+
+.uppercase {
+  font-size: 14px;
+  color: _palette($theme,brand-black);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gototop {
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  z-index: _zindex(closest);
+  opacity: 0;
+  visibility: hidden;
+  @include border-radius(50%);
+  // border: solid 1px _palette($theme,brand-black);
+  @include transition(all .5s ease);
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  a {
+    width: 50px;
+    height: 50px;
+    display: table;
+    color: _palette($theme,brand-black);
+    text-align: center;
+    i {
+      height: 50px; 
+      display: table-cell;
+      vertical-align: middle;
+
+    }
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+}
+
+@import 'nav-toggle';
+
+// Form Input Field
+.form-control {
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 54px;
+  font-size: 18px;
+  font-weight: 300;
+  &:active, &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: _palette($theme, brand-primary);
+  }
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.card {
+  padding: 0;
+  min-width: max-content;
+  margin-right: 15px;
+  margin-left: 15px;
+  background-color: white;
+  .img-card {
+    min-width: max-content;
+    z-index: 200;
+  }
+  &.gallery {
+    &:after, &:before {
+      content: attr(src);
+      width: 320px;
+      height: 455px;
+      top: 20px;
+      position: absolute;
+      background-color: inherit;
+      z-index: _zindex(furthest);
+    }
+    &:after {
+      @include scale(0.95,0.95);
+      opacity: 0.7;
+    }
+    &:before {
+      @include scale(0.90,0.90);
+      top: 40px;
+      opacity: 0.3;
+    }
+  }
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+
+  &.scrolling {
+    margin-left: -100px;
+    margin-right: -100px;
+    @include flex();
+    @include flexScroller();
+  }
+}
+.row-pb-md {
+  padding-bottom: 4em !important;
+}
+.row-pb-sm {
+  padding-bottom: 2em !important;
+}
+
+.fh5co-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0.8;
+  background: url(../images/loader.gif) center no-repeat #fff;
+}
+
+.animate-box {
+  .js & {
+    opacity: 0;
+  }
+}
+
+#fh5co-header-subscribe {
+  #email {
+    padding-right: 9em;
+  }
+  button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+  }
+}
+
+// Cursor start
+
+// body.tutorial {
+//   --color-text: #f35d35;
+//   --color-link: #f35d35;
+// }
+
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: #f35d35;
+}
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
+}
+
+.page, .page a {
+  cursor: none;
+ }
+
+// Cursor end

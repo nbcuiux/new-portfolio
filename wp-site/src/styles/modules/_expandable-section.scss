@@ -1,0 +1,101 @@
+
+
+@keyframes kickLeft {
+	0%   {left: 0px;}
+	50%  {left: -5px;}
+	100% {left: 0px;}
+}
+@keyframes kickLeft2 {
+	0%   {left: 0px;}
+	50%  {left: -5px;}
+	100% {left: 0px;}
+}
+
+
+//expandable section
+.expandable-container {
+    padding: 30px 100px;
+
+    min-height: 60%;
+
+    .slogan-container {
+        margin-bottom: 60px;
+    }
+}
+
+.expandable-items-container {
+
+}
+
+.expandable-items {
+
+}
+
+.expandable-item {
+    font-weight: 300;
+    width: 50%;
+    font-size: 14px;
+	margin-bottom: 30px;
+    i {
+		font-size: 13px;
+		display: inline-block;
+		margin-right: 10px;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		color: $color-primary;
+		transform: rotate(-180deg);
+		transition: all 0.2s ease-out;
+		animation-name: kickLeft2;
+		animation-duration: 0.2s;
+		animation-iteration-count: 1;
+    }
+    &.expandable-item--collapsed {
+    	i {
+	    	transform: rotate(0deg);
+	    	animation-name: kickLeft;
+	    	animation-duration: 0.2s;
+		    animation-iteration-count: 1;
+		}
+        .expandable-item__description {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+            padding: 0 30px;
+        }
+    }
+}
+
+.expandable-item__name {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+	display: flex;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.expandable-item__label {
+    position: relative;
+    display: inline-block;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $color-primary;
+        position: absolute;
+        bottom: -5px;
+    }
+}
+
+.expandable-item__description {
+    max-height: 400px;
+    opacity: 1.00;
+    pointer-events: all;
+	line-height: 29px;
+
+	transition: opacity .23s cubic-bezier(.215,.61,.355,1), max-height .33s ease-out, padding .33s ease-in-out;
+    //margin: 20px;
+    padding: 30px 30px 20px 30px;
+    box-sizing: border-box;
+}

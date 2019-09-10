@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+
+	<style>
+		svg {
+			background: radial-gradient(at 41% top, #202020, #000000);
+		}
+
+		#row {
+			animation: scroll 18s linear infinite;
+			-webkit-animation: scroll 18s linear infinite;
+			animation-fill-mode: forwards;
+		}
+
+		text {
+			font-size: 13px;
+			fill: #FFF;
+			letter-spacing: 1px;
+			font-family: 'Apex New Book', sans-serif;
+		}
+
+		@keyframes scroll {
+			0% {
+				transform: translate3d(0,0,0);
+			}
+			100% {
+				transform: translate3d(-1300px,0,0);
+			}
+		}
+
+
+	</style>
+	<defs>
+
+		<style type="text/css">
+			@font-face {
+			font-family: 'Apex New Book';
+			src: url('../../fonts/Apex-New-Book/apexnew-book-webfont.woff2') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			}
+		</style>
+	</defs>
+	<g id="row">
+		<image id="thumb1" x="-210" y="100" width="228" height="128" xlink:href="./syndicated-show-thumb.jpg"></image>
+		<image id="thumb2" x="50" y="100" width="228" height="128" xlink:href="./syndicated-movie-thumb.jpg"></image>
+		<image id="thumb3" x="310" y="100" width="228" height="128" xlink:href="./original-movie-thumb.jpg"></image>
+		<image id="thumb4" x="570" y="100" width="228" height="128" xlink:href="./slasher-thumb.jpg"></image>
+		<image id="thumb5" x="830" y="100" width="228" height="128" xlink:href="./post-thumb.jpg"></image>
+		<image id="thumb6" x="1090" y="100" width="228" height="128" xlink:href="./syndicated-show-thumb.jpg"></image>
+		<image id="thumb7" x="1350" y="100" width="228" height="128" xlink:href="./syndicated-movie-thumb.jpg"></image>
+		<image id="thumb8" x="1610" y="100" width="228" height="128" xlink:href="./original-movie-thumb.jpg"></image>
+
+		<text x="-210" y="258" width="328" height="128">Create a New Syndicated Show</text>
+		<text x="50" y="258" width="328" height="128">Create a New Syndicated Movie</text>
+		<text x="310" y="258" width="328" height="128">Create a New Original Movie</text>
+		<text x="570" y="258" width="328" height="128">Create Page for Original Show</text>
+		<text x="830" y="258" width="328" height="128">Create a Blog</text>
+		<text x="1090" y="258" width="328" height="128">Create a New Syndicated Show</text>
+		<text x="1350" y="258" width="328" height="128">Create a New Syndicated Movie</text>
+		<text x="1610" y="258" width="328" height="128">Create a New Original Movie</text>
+
+	</g>
+</svg>

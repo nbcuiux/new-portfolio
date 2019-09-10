@@ -1,0 +1,193 @@
+
+
+.menu-list-container {
+	transition: all 0.6s ease-in-out;
+	pointer-events: none;
+	position: absolute;
+	background-color: rgba(#fff,1.0);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	display: flex;
+	//align-items: center;
+	
+	.wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+
+
+
+		transition: transform .63s cubic-bezier(.215,.61,.355,1),background .2s cubic-bezier(.645,.045,.355,1),color .84s cubic-bezier(.645,.045,.349,1);
+		transition-delay: .2s,0s,.2s;
+		//position: fixed;
+		//width: 100%;
+		//left: 0;
+		//height: 100vh;
+		background: 0 0;
+		color: #000;
+		z-index: 1001;
+		transform: translateY(100vh) translateZ(0);
+		overflow: hidden;
+		pointer-events: none;
+
+
+
+	}
+	.show-menu & {
+		background-color: rgba(255,255,255,1.0);
+		pointer-events: all;
+		opacity: 1.0;
+		.wrapper {
+			transform: translateY(0) translateZ(0);
+			transition-delay: 0s,.2s,0s;
+		}
+	}
+}
+
+.menu-list-item {
+	font-size: 6vw;
+	text-transform: uppercase;
+	//margin: 50% 0;
+	transition: all 1.05s cubic-bezier(.215,.61,.355,1);
+	transform: translateY(50%) skewY(15deg);
+	perspective: 500px;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	user-select: none;
+	.show-menu & {
+		pointer-events: all;
+		transform: skew(0deg) translateY(0%);
+	}
+}
+
+.menu-list-item--less {
+	top: -100vh;
+}
+
+.menu-list-item--prev {
+	top: -100vh;
+}
+.menu-list-item--next {
+	opacity: 1.0;
+	top: 75vh;
+	opacity: 0.5;
+}
+
+.menu-list-item--more {
+	top: 150vh;
+}
+
+.menu-list-item--active {
+	opacity: 1.0;
+	top: 30vh;
+}
+
+.menu-list-item-glyph {
+	//transform: skew(-3deg,10deg) translateY(100%);
+	transition: all 1s ease-in-out;
+	display: inline-block;
+	margin: 10px 10px;
+	font-weight: 500;
+	//filter: blur(1px);
+	//opacity: 0.0;
+
+	.menu-list-item--more &,  .menu-list-item--less & {
+		&.el-1 {
+			transition-delay: 0.1s;
+			transform: skew(0deg,0deg) translateY(-20%);
+		}
+		&.el-2 {
+			transition-delay: 0.2s;
+			transform: skew(0deg,0deg) translateY(35%);
+		}
+		&.el-3 {
+			transition-delay: 0.3s;
+			transform: skew(0deg,0deg) translateY(-35%);
+		}
+		&.el-4 {
+			transition-delay: 0.4s;
+			transform: skew(0deg,0deg) translateY(50%);
+		}
+	}
+
+	.menu-list-item--active &, .menu-list-item--next & {
+		&.el-1 {
+			transition-delay: 0.1s;
+			transform: skew(0deg,0deg) translateY(0%);
+		}
+		&.el-2 {
+			transition-delay: 0.2s;
+			transform: skew(0deg,0deg) translateY(0%);
+		}
+		&.el-3 {
+			transition-delay: 0.3s;
+			transform: skew(0deg,0deg) translateY(0%);
+		}
+		&.el-4 {
+			transition-delay: 0.4s;
+			transform: skew(0deg,0deg) translateY(0%);
+		}
+	}
+	
+}
+
+
+.menu-scroll-pos {
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	z-index: 1000;
+	height: 0vh;
+	transform: translateX(-50%) translateY(-50%);
+	transition: all 1s ease-in-out;
+	transition-delay: 0.3s;
+	.show-menu & {
+		top: 50%;
+		height: 33vh;
+		transition-delay: 0s;
+	}
+}
+.menu-scroll-current {
+	margin-bottom: 10px;
+	transition-delay: 4.6s;
+	opacity: 0;
+	position: relative;
+	top: -20px;
+	transition: all 1s ease-in-out;
+	.show-menu & {
+		opacity: 1.0;
+		top: 0px;
+	}
+}
+.menu-scroll-bar {
+	height: 100%;
+	width: 1px;
+	background-color: #ddd;
+	position: relative;
+	left: 2px;
+
+}
+.menu-scroll-bar__pos {
+	position: relative;
+	left: 0px;
+	background-color: $color-primary;
+	width: 1px;
+	transition: all 1s ease-in-out;
+}
+.menu-scroll-total {
+	margin-top: 10px;
+	transition-delay: 4.6s;
+	opacity: 0;
+	position: relative;
+	top: 20px;
+	transition: all 1s ease-in-out;
+	.show-menu & {
+		opacity: 1.0;
+		top: 0px;
+	}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				<!-- document.querySelectorAll('#thumb2')[0].setAttribute('x', -60); -->
+			}
+		},false);
+	]]></script>
+	<style>
+		svg {
+			background: #E9F8FC;
+		}
+		@media screen and (max-width: 768px) {
+			#thumb2, #thumb3 {
+				transform: translateX(-40%);
+			}
+		}
+	</style>
+
+	<defs>
+		<clipPath id="mask-thumb2">
+			<rect x="0" y="0" width="328" height="328" />
+		</clipPath>
+
+		<clipPath id="mask-thumb3">
+			<rect x="300" y="0" width="328" height="328" />
+		</clipPath>
+
+	</defs>
+	<g id="row">
+
+		<image id="thumb2" x="10" y="10" height="290" width="290" xlink:href="./playground.jpg"></image>
+
+		<!-- <image id="thumb3" x="300" y="35" width="225" height="250.6963788" xlink:href="./crisp-optimized.gif"></image>		 -->
+
+	</g>
+</svg>

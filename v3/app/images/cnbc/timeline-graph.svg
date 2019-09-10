@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6240px" height="260px" viewBox="0 0 6240 260" enable-background="new 0 0 6240 260" xml:space="preserve">
+            <style>
+                .timeline__empty-point {
+                    fill: #48B1E5;
+                }
+                .timeline-graph__area {
+                    stroke: #48B1E5;
+                    stroke-width: 1.5;
+                    stroke-dasharray: 5;
+                }
+
+                text {
+                    font-family: 'Roboto Draft', sans-serif;
+                    font-size: 13px;
+                    fill: white;
+                }
+
+                #circle-grow {
+                <!-- transform: scale(1); -->
+                -webkit-transform-origin: center center;
+                animation: grow 8s infinite;
+                -webkit-animation: grow 8s infinite;
+                <!-- animation-fill-mode: forwards; -->
+                }
+
+                #circle-i {
+                <!-- opacity: 0; -->
+                -webkit-transform-origin: center center;
+                animation: show 8s infinite;
+                -webkit-animation: show 8s infinite;
+                <!-- animation-fill-mode: forwards; -->
+                }
+
+                @keyframes grow {
+                0%, 10% {
+                transform: scale(1.0);
+                }
+
+                15%, 100% {
+                transform: scale(1.2);
+                }
+                }
+
+                @keyframes show {
+                0%, 10% {
+                opacity: 0;
+                }
+
+                15%, 100% {
+                opacity: 1;
+                }
+                }
+                }
+            </style>
+            <defs>
+                <pattern id="timeline-pattern" patternUnits="userSpaceOnUse" width="5" height="5">
+                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAABlBMVEX///8AteaFGc7OAAAAAnRSTlMAsyT7Lw4AAAANSURBVHgBY4ADRjqwAAKUAAsR8UutAAAAAElFTkSuQmCC" width="5" height="5" x="0" y="0">
+                    </image>
+                </pattern>
+                <style type="text/css">
+                    @font-face {
+                    font-family: 'Roboto Draft';
+                    src: url('../../fonts/Roboto-Draft/RobotoDraft-Bold.woff2') format('woff');
+                    font-weight: bold;
+                    font-style: normal;
+                    }
+                </style>
+            </defs>
+            <path fill="url(#timeline-pattern)" d="M0 320 C29.28203230275504 252.3762464425593 58.56406460551008 184.75249288511864 120 160C181.43593539448992 135.24750711488136 275.0257738807147 153.36627490208477 360 160C444.9742261192853 166.63372509791523 521.332839871631 161.7824075065423 600 160C678.667160128369 158.2175924934577 759.6428666327608 159.50409507174595 840 160C920.3571333672392 160.49590492825405 1000.0956935973252 160.20121220647394 1080 160C1159.9043064026748 159.79878779352606 1239.9743589779384 159.69105610235826 1320 160C1400.0256410220616 160.30894389764174 1480.0068704909204 161.03456338409293 1560 160C1639.9931295090796 158.96543661590707 1719.9981590583798 156.17069036126998 1799.9999999999998 160C1880.0018409416198 163.82930963873002 1960.0004932755596 174.28267517082713 2039.9999999999998 176C2119.99950672444 177.71732482917287 2199.999867839378 170.6986089554216 2280 176C2360.000132160622 181.3013910445784 2440.0000353669266 198.92288900748648 2519.9999999999995 208C2599.9999646330725 217.07711099251352 2679.999990692914 217.6098350146325 2760 208C2840.000009307086 198.3901649853675 2920.000001861417 178.6377709339836 3000 176C3079.999998138583 173.3622290660164 3160.000001861417 187.83908124943318 3240 192C3319.999998138583 196.16091875056682 3399.999990692914 190.00590406828357 3480 192C3560.000009307086 193.99409593171643 3640.000035366927 204.13730247743257 3720 208C3799.999964633073 211.86269752256743 3879.9998678393777 209.44488602198615 3960 224C4040.0001321606223 238.55511397801385 4120.00049327556 270.08315343462283 4200 272C4279.99950672444 273.91684656537717 4359.99815905838 246.22250023952242 4440 240C4520.00184094162 233.77749976047758 4600.00687049092 249.02684560728744 4680 256C4759.99312950908 262.97315439271256 4839.974358977938 261.6701173313278 4920 240C5000.025641022062 218.32988266867224 5080.095693597325 176.2926850674014 5160 176C5239.904306402675 175.7073149325986 5319.64286663276 217.15914239906644 5400 208C5480.35713336724 198.84085760093356 5561.332839871631 139.07074533633266 5640 112C5718.667160128369 84.92925466366732 5795.025773880715 90.55787625560275 5880 80C5964.974226119285 69.44212374439725 6058.564064605509 42.697749641256365 6119.999999999999 80C6181.435935394489 117.30225035874363 6210.717967697245 218.65112517937183 6240 320 Z" class="timeline-graph__area"></path>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="118" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="358" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="598" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="838" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="1078" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="1318" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="1558" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="1797.9999999999998" y="152"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="2037.9999999999998" y="168"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="2278" y="168"></rect>
+        </g>
+        <g>
+            <g class="timeline-graph__point timeline-graph__point--0" width="20" height="20">
+                <circle r="10" cx="2519.9999999999995" cy="208" style="fill:#6979af;stroke:#6979af;"></circle>
+                <text text-anchor="middle" class="timeline-graph__i" x="2519.9999999999995" y="213"></text>
+            </g>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="2758" y="200"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="2998" y="168"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="3238" y="184"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="3478" y="184"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="3718" y="200"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="3958" y="216"></rect>
+        </g>
+        <g>
+            <g class="timeline-graph__point timeline-graph__point--0" width="20" height="20">
+                <circle r="10" cx="4200" cy="272" style="fill:#1a545a;stroke:#1a545a;"></circle>
+                <text text-anchor="middle" class="timeline-graph__i" x="4200" y="277">i</text>
+            </g>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="4438" y="232"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="4678" y="248"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="4918" y="232"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="5158" y="168"></rect>
+        </g>
+        <g>
+            <g class="timeline-graph__point timeline-graph__point--0" width="20" height="20">
+                <circle id="circle-grow" r="10" cx="5400" cy="208" style="fill:#0ebab2;stroke:#0ebab2;"></circle>
+                <text id="circle-i" text-anchor="middle" class="timeline-graph__i" x="5400" y="213">i</text>
+            </g>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="5638" y="104"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="5878" y="72"></rect>
+        </g>
+        <g>
+            <rect class="timeline__empty-point" width="4" height="16" x="6117.999999999999" y="72"></rect>
+        </g>
+    </svg>

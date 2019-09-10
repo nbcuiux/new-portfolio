@@ -1,0 +1,50 @@
+//projects
+.projects-container {
+	padding: 30px 100px;
+	min-height: 40%;
+}
+.projects-head {
+	display: flex;
+	margin-bottom: 50px;
+	font-size: 10px;
+}
+
+.project {
+	display: flex;
+	margin-bottom: 10px;
+	&:last-of-type {
+		margin-bottom: 0px;
+	}
+}
+
+.title-container {
+	font-size: 48px;
+	margin-bottom: 60px;
+}
+
+
+.projects-head__legend, .project__column {
+	width: 150px;
+	flex-shrink: 0;
+	&.auto-width {
+		width: auto;
+		flex-shrink: 1;
+	}
+}
+
+.projects-head__legend {
+	text-transform: uppercase;
+	display: flex;
+	flex-wrap: 0;
+}
+
+.project__column {
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.project__column-resp {
+	color: #aaa;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<style>
+		svg {
+			background: radial-gradient(at 41% top, #202020, #000000);
+		}
+
+		#thumb1-tilt {
+			opacity: 0.7;
+			animation: tilt 6s ease-out infinite;
+			-webkit-animation: tilt 6s ease-out infinite;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes tilt {
+			0%, 100% {
+			    transform: perspective(700px) translate3d(6px, 6px, -4px) rotate3d(1, 0, 0, -1deg) rotate3d(0, 1, 0, -4deg) rotate3d(0, 0, 1, 0deg) ;
+			}
+			50% {
+			    transform: perspective(700px) translate3d(-5px, -4px, 3px) rotate3d(1, 0, 0, 1deg) rotate3d(0, 1, 0, 5deg) rotate3d(0, 0, 1, 0deg) ;
+			}	
+		}
+
+		@media screen and (max-width: 768px) {
+			#mobile  {
+				transform: translateX(-60px);
+			}
+		}
+	</style>
+
+	<g id="row">
+		<image id="thumb1" x="-228" y="-100" width="984" height="492.9859719" xlink:href="./it-movie.jpg"></image>
+		<!-- <image id="thumb1-tilt" x="-328" y="-100" width="984" height="492.9859719" xlink:href="./it-movie.jpg"></image> -->
+
+		<image id="mobile" x="30" y="12" width="167.936" height="300" xlink:href="./mobile.gif"></image>
+
+	</g>
+</svg>

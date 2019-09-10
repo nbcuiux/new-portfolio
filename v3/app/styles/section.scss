@@ -1,0 +1,319 @@
+.fh5co-section {
+  padding: 7em 0;
+  clear: both;
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 5em 0 2em;
+    // pointer-events: none;
+  }
+
+  .display-t {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+  .display-tc {
+    z-index: _zindex(further);
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &--white {
+    background-color: rgba(_palette($theme,brand-white),1);
+
+    .fh5co-heading {
+      h2 {
+        color: _palette($theme,brand-black);
+      }
+      p {
+        color: lighten(_palette($theme,brand-black), 25%);
+      }
+    }
+    .btn {
+      height: 54px;
+      border-radius: 0px;
+      border: solid 1px _palette($theme,brand-gray);
+      background: _palette($theme,brand-white);
+      color: _palette($theme,brand-black);
+      font-size: 16px;
+      padding-left: 30px;
+      padding-right: 30px;
+      &:hover {
+        background-color: _palette($theme, brand-white) !important;
+      }
+    }
+  }
+
+  &--blue {
+    background-color: _palette($theme, brand-blue);
+    .fh5co-heading {
+      h2 {
+        color: _palette($theme,brand-white);
+      }
+    }
+  }
+
+  &--black {
+    background-color: darken(_palette($theme, brand-black),10%);
+
+    .fh5co-heading {
+      h1, h2, h3, h4, h5, h6, figure {
+        color: _palette($theme, brand-white);
+      }
+      p {
+        color: lighten(_palette($theme, brand-black),10%);
+      }
+    }
+  }
+
+  &--gray {
+    background-color: _palette($theme, brand-gray);
+
+    .fh5co-heading {
+      h1, h2, h3, h4, h5, h6, figure {
+        color: _palette($theme,brand-white);
+      }
+      p {
+        color: lighten(_palette($theme,brand-black),10%);
+      }
+    }
+  }
+
+  .video-overlay {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    background-color: rgba(darken(_palette($theme, brand-black), 10%), .4);
+
+    .icon--controls {
+      color: _palette($theme,brand-white);
+      background-color: transparent;
+      padding: 20px;
+      padding-left: 24px;
+      letter-spacing: -2px;
+      border-radius: 50%;
+      border: solid 3px rgba(_palette($theme,brand-white), 0.4);
+      $transition: background-color _animation(duration) _animation(easing2), border-color _animation(duration) _animation(easing2) 0.2s;
+      @include transition($transition);
+
+      &:hover {
+        border-color: _palette($theme,brand-white);
+        background-color: _palette($theme,brand-white);
+        color: _palette($theme,brand-black);
+      }
+    }
+  }
+
+  @include echo-text();
+
+  .fh5co-heading {
+    margin-bottom: 2em;
+
+    &.fh5co-heading-sm {
+      margin-bottom: 2em;
+    }
+    h1 {
+      @include heading1();
+    }
+    .x-glyph {
+      @include x-glyph();
+    }
+    h2 {
+      @include heading2();
+    }
+    h3 {
+      @include heading3();
+    }
+    .dud {
+      color: lighten(_palette($theme, brand-black), 25%);
+    }
+    h4 {
+      @include heading4();
+    }
+    p {
+      @include body1();
+      margin-right: 1em;
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      span {
+        opacity: 0;
+        @include transition(opacity (_animation(duration) / 2) _animation(easing));
+
+        @for $j from 1 through 4 {
+          &:nth-last-child(4n+#{$j}) {
+            transition-delay: #{(($j * 0.12) + 0.3)}s;
+          }
+        }
+      }
+    }
+
+    @include links();
+
+    .links {
+      a {
+        opacity: 0;
+        @include transform(translateY(50%));
+        @include transition(all (_animation(duration) * 1) _animation(easing));
+        @for $j from 1 through 4 {
+          &:nth-child(#{$j}) {
+            transition-delay: #{(($j * 0.12) + 0.9)}s;
+          }
+        }
+      }
+    }
+    
+    .tags {
+      span {
+        display: block;
+        line-height: 1.6em;
+        opacity: 0;
+        @include transition(all _animation(duration) _animation(easing3));
+        @include transform(translateX(50px));
+
+        @for $j from 1 through 12 {
+          &:nth-child(#{$j}) {
+            transition-delay: #{$j * 0.09}s;
+          }
+        }
+      }
+      &--right {
+        span {
+          @include transform(translateX(-50px));          
+        }
+      }
+    }
+    > span {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 300;
+      text-align: center;
+      font-size: 20px;
+      color: lighten(_palette($theme,brand-black), 0%);
+
+      @media screen and (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+  }
+  &.glyph {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 50%;
+      margin-top: 1.75em;
+      height: 7em;
+      width: 1px;
+      background: darken(_palette($theme, brand-gray), 0%);
+    }
+    @media screen and (max-width: $screen-sm) {
+      &:after {
+        margin-top: 1.25em;
+        height: 5em;
+      }
+    }
+  }
+  @include image-mask();
+
+  &.active {
+    p {
+      span { 
+        opacity: 1;
+      }
+    }
+    svg {
+      g {
+        opacity: 1;
+        @include transform(translate(0,0) scale(1) skew(0deg));
+
+        @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{(($i - 1) * 1.2)}s;
+          text {
+            @for $j from 1 through 10 {
+              &:nth-child(#{$j}) {
+                transition-delay: #{($j * 0.09) + (($i - 1) * 1.2)}s;
+              }
+            }
+          }
+        }
+      }
+
+        text {
+          opacity: 0;
+
+          &:last-child {
+            opacity: 1;
+          }
+        }
+      }      
+    }
+    a {
+      .img-wrapper {
+        &--left, &--right {
+          opacity: 1;
+          @include transform(scale(1,1) translate(0,0));
+            img, video {
+            width: 100%;
+        
+
+          }
+
+        }
+      }
+      &:hover {
+        .img-wrapper {
+          &--left, &--right {
+           @include transform(scale(0.97,0.97) translate(0,0));
+
+
+           img, video {
+            @include scale(1.05,1.05);
+
+
+          }
+        }
+      }
+    }
+  }
+  .tags {
+    span {
+      opacity: 1;   
+      @include transform(translateX(0px));     
+    }
+  }
+  .links {
+    a {
+      opacity: 1;
+      @include transform(translateY(0%));
+    }
+  }
+  .image-group {
+    &--layered1 {
+      .background, .foreground {
+        opacity: 1;   
+        @include transform(translateX(0px));   
+      }
+    }
+  }
+}
+&.no-animate {
+  svg {
+      g {
+        @include transform(translate(0,0) scale(1) skew(0deg));
+        text {
+          opacity: 0;
+          &:last-child {
+            opacity: 1;
+          }
+        }
+      }
+  }
+}
+}

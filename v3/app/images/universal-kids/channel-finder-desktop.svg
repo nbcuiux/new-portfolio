@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="6 0 328 328" enable-background="new 6 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				<!-- document.querySelectorAll('svg')[0].setAttribute('viewBox', '80 0 328 328'); -->
+			}
+		},false);
+	]]></script>
+	<style>
+		#card1-outline, #card2-outline, #card3-outline, #card4-outline, #card5-outline, #card6-outline, #card7-outline, #card8-outline, #card9-outline, #card10-outline, #card11-outline {
+		fill: none;
+		stroke: #E25F66;
+		} 
+
+		text {
+		font-size: 10px;
+		font-weight: 700;
+		letter-spacing: 0.012em;
+		font-family: 'Oswald', sans-serif;
+		-webkit-font-smoothing: subpixel-antialiased;
+		}
+
+		#headline {
+		text-transform: uppercase;
+		font-size: 21px;
+		fill: #e9c61d;
+		font-weight: 700;
+		}
+
+		#sub-headline {
+		fill: #e25f66;
+		font-size: 15px;
+		}
+
+		.rotate {
+		-webkit-animation: rotate 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		animation: rotate 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		animation-fill-mode: forwards;
+		}
+
+		.fill-pink {
+		fill: #F3EEE8;
+		-webkit-animation: fill-pink 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		animation: fill-pink 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		animation-fill-mode: forwards;
+		}
+
+		.fill-white {
+		fill: #32469C;
+		-webkit-animation: fill-white 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		animation: fill-white 18s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		animation-fill-mode: forwards;
+		}
+
+		.delay1 {
+		-webkit-animation-delay: 0s;
+		animation-delay: 0s;
+		}
+
+		.delay2 {
+		-webkit-animation-delay: 2s;
+		animation-delay: 2s;
+		}
+
+		.delay3 {
+		-webkit-animation-delay: 4s;
+		animation-delay: 4s;
+		}
+
+		.delay4 {
+		-webkit-animation-delay: 6s;
+		animation-delay: 6s;
+		}
+
+		.delay5 {
+		-webkit-animation-delay: 8s;
+		animation-delay: 8s;
+		}
+
+		.delay6 {
+		-webkit-animation-delay: 10s;
+		animation-delay: 10s;
+		}
+
+		.delay7 {
+		-webkit-animation-delay: 12s;
+		animation-delay: 12s;
+		}
+
+		.delay8 {
+		-webkit-animation-delay: 14s;
+		animation-delay: 14s;
+		}
+
+		.delay9 {
+		-webkit-animation-delay: 16s;
+		animation-delay: 16s;
+		}
+
+		@-webkit-keyframes rotate {
+		0%, 48%, 62%, 100% {
+		-webkit-transform: rotate(-3deg);
+		transform: rotate(-3deg);
+		}
+
+		54%, 58% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		}
+		}
+
+		@keyframes rotate {
+		0%, 48%, 62%, 100% {
+		-webkit-transform: rotate(-3deg);
+		transform: rotate(-3deg);
+		}
+
+		54%, 58% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		}
+		}
+
+		@-webkit-keyframes fill-pink {
+		0%, 48%, 62%, 100% {
+		fill: #F3EEE8;
+		}
+
+		54%, 58% {
+		fill: #e25f66;
+		}
+		}
+
+		@keyframes fill-pink {
+		0%, 48%, 62%, 100% {
+		fill: #F3EEE8;
+		}
+
+		54%, 58% {
+		fill: #e25f66;
+		}
+		}
+
+		@-webkit-keyframes fill-white {
+		0%, 48%, 62%, 100% {
+		fill: #32469C;
+		}
+
+		54%, 58% {
+		fill: #FFFFFF;
+		}
+		}
+
+		@keyframes fill-white {
+		0%, 48%, 62%, 100% {
+		fill: #32469C;
+		}
+
+		54%, 58% {
+		fill: #FFFFFF;
+		}
+		}
+
+		#card1,
+		#card1-outline,
+		#card1-text,
+		#card3,
+		#card3-outline,
+		#card3-text,
+		#card4,
+		#card4-outline,
+		#card4-text,
+		#card6,
+		#card6-outline,
+		#card6-text,
+		#card7,
+		#card7-outline,
+		#card7-text,
+		#card9,
+		#card9-outline,
+		#card9-text
+		{
+			display: none;
+		} 
+
+		@media screen and (max-width: 768px) {
+			#card1,
+			#card1-outline,
+			#card1-text,
+			#card3,
+			#card3-outline,
+			#card3-text,
+			#card4,
+			#card4-outline,
+			#card4-text,
+			#card6,
+			#card6-outline,
+			#card6-text,
+			#card7,
+			#card7-outline,
+			#card7-text,
+			#card9,
+			#card9-outline,
+			#card9-text
+			{
+				display: block;
+			} 
+		}
+
+	</style>
+
+	<defs>
+
+		<clipPath id="mask">
+			<rect x="-164" y="0" width="720" height="328" />
+		</clipPath>
+
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Oswald');
+		</style>
+	</defs>
+
+	<image id="bg" x="-164" y="0" width="720" height="405.703125" xlink:href="./megaphone.jpg" clip-path="url(#mask)"></image>
+
+	<text id="headline" x="160" y="55" text-anchor="middle">Channel Finder</text>
+	<text id="sub-headline" x="160" y="75" text-anchor="middle">Select Providers</text>
+
+	<rect id="card1" x="-146" y="110" width="168" height="30" class="fill-pink delay1"/>
+	<rect id="card1-outline" x="-148" y="108" width="172" height="34" class="rotate delay1" style="transform-origin: -62px 125px;"/>
+	<text id="card1-text" x="-60" y="127" text-anchor="middle" class="fill-white delay1">Optimum</text>
+
+	<rect id="card2" x="70" y="110" width="168" height="30" class="fill-pink delay4"/>
+	<rect id="card2-outline" x="68" y="108" width="172" height="34" class="rotate delay4" style="transform-origin: 154px 125px;"/>
+	<text id="card2-text" x="158" y="127" text-anchor="middle" class="fill-white delay4">Verizon FiOS</text>
+
+	<rect id="card3" x="290" y="110" width="168" height="30" class="fill-pink delay7"/>
+	<rect id="card3-outline" x="288" y="108" width="172" height="34" class="rotate delay7" style="transform-origin: 374px 125px;"/>
+	<text id="card3-text" x="375" y="127" text-anchor="middle" class="fill-white delay7">Youtube TV</text>
+
+	<rect id="card4" x="-146" y="180" width="168" height="30" class="fill-pink delay2"/>
+	<rect id="card4-outline" x="-148" y="178" width="172" height="34" class="rotate delay2" style="transform-origin: -62px 195px;"/>
+	<text id="card4-text" x="-60" y="197" text-anchor="middle" class="fill-white delay2">CenturyLink Stream</text>
+
+	<rect id="card5" x="70" y="180" width="168" height="30" class="fill-pink delay5"/>
+	<rect id="card5-outline" x="68" y="178" width="172" height="34" class="rotate delay5" style="transform-origin: 154px 195px;"/>
+	<text id="card5-text" x="158" y="197" text-anchor="middle" class="fill-white delay5">Direct TV</text>
+
+	<rect id="card6" x="290" y="180" width="168" height="30" class="fill-pink delay8"/>
+	<rect id="card6-outline" x="288" y="178" width="172" height="34" class="rotate delay8" style="transform-origin: 374px 195px;"/>
+	<text id="card6-text" x="375" y="197" text-anchor="middle" class="fill-white delay8">FuboTV</text>
+
+	<rect id="card7" x="-146" y="247" width="168" height="30" class="fill-pink delay3"/>
+	<rect id="card7-outline" x="-148" y="245" width="172" height="34" class="rotate delay3" style="transform-origin: -62px 262px"/>
+	<text id="card7-text" x="-60" y="265" text-anchor="middle" class="fill-white delay3">Playstation Vue</text>
+
+	<rect id="card8" x="70" y="247" width="168" height="30" class="fill-pink delay6"/>
+	<rect id="card8-outline" x="68" y="245" width="172" height="34" class="rotate delay6" style="transform-origin: 154px 262px"/>
+	<text id="card8-text" x="158" y="265" text-anchor="middle" class="fill-white delay6">Sling TV</text>
+
+	<rect id="card9" x="290" y="247" width="168" height="30" class="fill-pink delay9"/>
+	<rect id="card9-outline" x="288" y="245" width="172" height="34" class="rotate delay9" style="transform-origin: 374px 262px"/>
+	<text id="card9-text" x="375" y="265" text-anchor="middle" class="fill-white delay9">Other</text>
+
+</svg>

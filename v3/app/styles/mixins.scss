@@ -1,0 +1,522 @@
+@import 'motion';
+
+// Mixins
+@mixin shadows() {
+  -webkit-box-shadow: 5px 10px 30px 10px rgba(_palette($theme,brand-black), .1);
+  -moz-box-shadow: 5px 10px 30px 10px rgba(_palette($theme,brand-black), .1);
+  box-shadow: 5px 10px 30px 10px rgba(_palette($theme,brand-black), .1);
+}
+
+@mixin shadows2() {
+  -webkit-box-shadow: -10px -5px 30px 10px rgba(_palette($theme,brand-black), .1);
+  -moz-box-shadow: -10px -5px 30px 10px rgba(_palette($theme,brand-black), .1);
+  box-shadow: -10px -5px 30px 10px rgba(_palette($theme,brand-black), .1);
+}
+
+@mixin translateX($translatex) {
+  -moz-transform: translateX($translatex);
+  -webkit-transform: translateX($translatex);
+  -ms-transform: translateX($translatex);
+  -o-transform: translateX($translatex);
+  transform: translateX($translatex);
+}
+
+@mixin rotate($amount) {
+  -moz-transform: rotate($amount);
+  -webkit-transform: rotate($amount);
+  -ms-transform: rotate($amount);
+  -o-transform: rotate($amount);
+  transform: rotate($amount);
+}
+@mixin translateY($amount) {
+  -moz-transform: translateY($amount);
+  -webkit-transform: translateY($amount);
+  -ms-transform: translateY($amount);
+  -o-transform: translateY($amount);
+  transform: translateY($amount);
+}
+@mixin translate3d($x,$y,$z) {
+  -moz-transform: translate3d($x,$y,$z);
+  -webkit-transform: translate3d($x,$y,$z);
+  -ms-transform: translate3d($x,$y,$z);
+  -o-transform: translate3d($x,$y,$z);
+  transform: translate3d($x,$y,$z);
+}
+@mixin scale($x, $y) {
+  -moz-transform: scale($x, $y);
+  -webkit-transform: scale($x, $y);
+  -ms-transform: scale($x, $y);
+  -o-transform: scale($x, $y);
+  transform: scale($x, $y);
+}
+
+@mixin transition($transition) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-delay($transition-delay) {
+  -moz-transition-delay: $transition-delay;
+  -o-transition-delay: $transition-delay;
+  -webkit-transition-delay: $transition-delay;
+  -ms-transition-delay: $transition-delay;
+  transition-delay: $transition-delay;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin inline-block() {
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexwrap() {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+}
+
+@mixin flex-align-items($value) {
+  align-items: $value;
+  -webkit-align-items: $value;
+  -ms-align-items: $value;
+}
+
+@mixin flex-justify-content($value) {
+  justify-content: $value;
+  -webkit-justify-content: $value;
+  -ms-justify-content: $value;
+}
+
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flexScroller() {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+
+  padding-left: calc((100vw - (100% - 30px*2))/2);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: -webkit-ew-resize;
+  cursor: ew-resize;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  @include flex-justify-content(flex-start);
+  @include flex-align-items(flex-start);
+
+  -webkit-overflow-scrolling: touch;
+
+  div {
+    &:last-child {
+      padding-right: 60px;
+      background-color: transparent;
+    }
+  }
+
+  .img-card {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
+@mixin animation ($animation, $duration, $delay, $timing) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-timing-function: $timing;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; 
+  -moz-animation-timing-function: $timing;
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; 
+  -o-animation-timing-function: $timing;
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards;
+  animation-timing-function: $timing;
+}
+
+@mixin keyframes ($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+
+  @-o-keyframes $animation_name {
+    @content;
+  }
+
+  @keyframes $animation_name {
+    @content;
+  }
+}
+
+@mixin echo-text() {
+  svg {
+    position: absolute;
+    margin-top: -7em;
+    height: 125vh;
+
+    g {
+      perspective: 1000;
+      opacity: 0;
+      $transition: transform (_animation(duration) * 2) _animation(easing),
+      opacity (_animation(duration) * 2) _animation(easing);
+      @include transition($transition);
+
+      &.left {
+        @include transform(translate(-30%, -5%) scale(1.1) skew(-10deg));
+      }
+
+      &.right {
+        @include transform(translate(30%, 5%) scale(1.1) skew(5deg));
+        transform-origin: top;
+      }
+
+      text {
+        fill: none; 
+        letter-spacing: -0.025em;
+        font-weight: 700;
+        stroke: lighten(_palette($theme, brand-primary), 38%); 
+        stroke-width: 1px;
+        font-size: 800px;
+        position: absolute;
+        opacity: 0.8;
+        // transition: transform .35s _animation(easing), opacity .35s _animation(easing);
+        $transition: 
+        transform .35s _animation(easing),
+        opacity .35s _animation(easing);
+        @include transition($transition);
+
+        &.small {
+           font-size: 150px;
+           letter-spacing: -3px;
+        }
+        &.medium {
+          font-size: 200px;
+          letter-spacing: -5px;
+        }
+        &.large {
+          font-size: 400px;
+        }
+      }
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0s;
+          text {
+            @for $j from 1 through 10 {
+              &:nth-child(#{$j}) {
+                transition-delay: 0s;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: $screen-sm ) {
+        pointer-events: none;
+        width: 150vw;
+        height: 150vh;
+        transform: translate(-25vw, -25vh);
+        g {
+          text {
+            font-size: 400px;
+            &.small {
+             font-size: 100px;
+             letter-spacing: -3px;
+            }
+            &.medium {
+              font-size: 150px;
+              letter-spacing: -5px;
+            }
+            &.large {
+              font-size: 200px;
+            }
+          }
+        }
+    }
+  }
+}
+
+@mixin image-mask() {
+  a {
+    .img-wrapper {
+      @include shadows();
+      background: lighten(_palette($theme,brand-black), 79%);
+      overflow: hidden;
+      @include transition(all _animation(duration) _animation(easing));
+
+      img, video {
+        position: relative;
+        @include transition(transform _animation(duration) _animation(easing2));
+        @include transition-delay(0.09s);
+      }
+
+      &--left {
+        opacity: 0;
+        @include transform(scale(1,1) translate(-10%,0));
+      }
+
+      &--right {
+        opacity: 0;
+        @include transform(scale(1,1) translate(10%,0));
+      }
+    }
+    &:hover, &:hover {
+      .img-wrapper {
+        &--right, &--left {
+          opacity: 1;
+          @include transform(scale(0.97,0.97) translate(0,0));
+
+          img, video {
+            @include scale(1.05,1.05);
+
+            &:after {
+              opacity: 1;
+              visibility: visible;
+              @media screen and (max-width: $screen-sm ) {
+                opacity: 0;
+                visibility: hidden;
+              }
+            }
+          }
+
+          @media screen and (max-width: $screen-sm ) {
+            @include scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin icomoon() {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+  }
+
+
+  @mixin headingJumbo () {
+    margin-bottom: 0px;
+    margin-top: 0;
+    font-size: 80px;
+    letter-spacing: 0.01em;
+    line-height: 1em;
+    font-weight: 700;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 10vw;
+      letter-spacing: -0.01rem;
+    }
+  }
+
+  @mixin heading1 () {
+    margin-bottom: 0px;
+    margin-top: 0;
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 1em;
+    font-weight: 600;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 32px;
+      letter-spacing: -0.01rem;
+    }
+  }
+
+  @mixin heading2() {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 400;
+
+    font-size: 30px;
+    letter-spacing: 0.02em;
+    line-height: 1.275em;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 24px;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+
+      font-weight: 300;
+    }
+  }
+
+
+  @mixin heading3 () {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.1em;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  @mixin heading4 () {
+    font-size: 24px;
+    line-height: 1.275em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  @mixin body1 () {
+    font-size: 1em;
+    // pointer-events: none;
+    line-height: 1.5em;
+    font-weight: 300;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 1.1em;
+      // pointer-events: none;
+      line-height: 1.275em;
+    }
+  }
+
+  @mixin x-glyph() {
+    position: relative;
+    display: block;
+    width: 58px;
+    height: 58px;
+    margin: auto;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background: _palette($theme,brand-white);
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 50%;
+    }
+    &:before {
+      @include rotate(-45deg);
+    }
+    &:after {
+      @include rotate(45deg);
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  @mixin links {
+    .links {
+      @include flex();
+      @include flex-direction(row);
+
+      a {
+        @include flex();
+        @include flex-direction(column);
+        @include body1();
+
+        font-weight: 600;
+        @include transition(all _animation(duration) ease);
+
+        span {
+          white-space: nowrap;
+          color: lighten(_palette($theme, brand-primary), 10%);
+          @include transition(color _animation(duration) _animation(easing3));
+        }
+
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+
+        .underline {
+          width: auto;
+          background: darken(_palette($theme, brand-black), 5%);
+          height: 1px;
+          @include transition(transform _animation(duration) _animation(easing3));
+          @include transform(scaleX(0));
+          transform-origin: left;
+        }
+
+        &:hover, &:active, &:focus {
+          outline: none;
+          text-decoration: none;
+
+          span {
+            color: lighten(_palette($theme, brand-primary), 10%);
+          }
+
+          .underline {
+            @include transform(scaleX(1));
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,24 @@
+$palette: (
+  theme1: (
+    brand-primary: #F73859,
+    brand-secondary: #f35f55,
+    brand-white: #FFFFFF,
+    brand-black: #353535,
+    brand-gray: rgba(#2a3356, 0.9)
+  ),
+  theme2: (
+    brand-primary: #e73c0e,
+    brand-secondary: #E3690A,
+    brand-success : #78CA2A,
+    brand-warning: #F2CE45,
+    brand-white: #FFFFFF,
+    brand-black: #333031,
+    brand-gray: #DEDEDC,
+    brand-blue: #0089CF,
+    brand-orange: #f36f21,
+    brand-yellow: #FDB813,
+    brand-light-gray: tint(#dededc,60%)
+  )
+);
+
+$theme: 'theme2';

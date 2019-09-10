@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				document.querySelectorAll('#thumb2-tilt')[0].style.animation = 'none';
+			}
+		},false);
+	]]></script>
+	<style>
+		svg {
+			background: radial-gradient(at 41% top, #202020, #000000);
+		}
+
+		#thumb2-tilt {
+			opacity: 0.7;
+			animation: tilt 6s ease-out infinite;
+			-webkit-animation: tilt 6s ease-out infinite;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes tilt {
+			0%, 100% {
+			    transform: perspective(700px) translate3d(6px, 6px, -4px) rotate3d(1, 0, 0, -1deg) rotate3d(0, 1, 0, -4deg) rotate3d(0, 0, 1, 0deg) ;
+			}
+			50% {
+			    transform: perspective(700px) translate3d(-5px, -4px, 3px) rotate3d(1, 0, 0, 1deg) rotate3d(0, 1, 0, 5deg) rotate3d(0, 0, 1, 0deg) ;
+			}	
+		}
+	</style>
+
+	<defs>
+		
+
+		<clipPath id="mask-thumb2">
+			<rect x="0" y="0" width="328" height="328" />
+		</clipPath>
+		
+
+		<clipPath id="mask-thumb3">
+			<rect x="300" y="0" width="328" height="328" />
+		</clipPath>
+	</defs>
+
+	<clipPath id="mask-thumb1">
+		<rect x="-328" y="0" width="328" height="328" />
+	</clipPath>
+
+	<g id="row">
+
+		<image id="thumb2" x="-154" y="0" height="328" width="583.1111111" xlink:href="./movies-friday-13th.jpg" clip-path="url(#mask-thumb2)"></image>
+		<image id="thumb2-tilt" x="-154" y="0" height="328" width="583.1111111" xlink:href="./movies-friday-13th.jpg" clip-path="url(#mask-thumb2)"></image>
+
+		<image id="thumb1" x="-462" y="0" height="328" width="583.1111111" xlink:href="./movies-scream.jpg" clip-path="url(#mask-thumb1)"></image>
+
+		<image id="thumb3" x="210" y="0" height="328" width="431.5280236" xlink:href="./the-boy-2.jpg" clip-path="url(#mask-thumb3)"></image>		
+
+	</g>
+</svg>

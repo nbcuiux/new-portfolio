@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				<!-- document.querySelectorAll('svg')[0].setAttribute('viewBox', '140 0 328 328'); -->
+			}
+		},false);
+	]]></script>
+	<style>
+		svg {
+			background: #fefdfd;
+		}
+
+		text {
+			white-space: normal;
+			font-size: 9px;
+			fill: #3892F1;
+			font-weight: bold;
+			letter-spacing: .1px;
+			font-family: 'Roboto Draft', sans-serif;
+		}
+
+		.animate {
+			stroke: #d8d8d8;
+			fill: #FFFFFF;
+			transform-origin: center;
+			animation: hover 30s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+			-webkit-animation: hover 30s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		}
+
+		.delay1 {
+			animation-delay: 0s;
+			-webkit-animation-delay: 0s;
+		}
+
+		.delay2 {
+			animation-delay: 2s;
+			-webkit-animation-delay: 2s;
+		}
+
+		.delay3 {
+			animation-delay: 4s;
+			-webkit-animation-delay: 4s;
+		}
+
+		.delay4 {
+			animation-delay: 6s;
+			-webkit-animation-delay: 6s;
+		}
+
+		.delay5 {
+			animation-delay: 8s;
+			-webkit-animation-delay: 8s;
+		}
+
+		.delay6 {
+			animation-delay: 10s;
+			-webkit-animation-delay: 10s;
+		}
+
+		.delay7 {
+			animation-delay: 12s;
+			-webkit-animation-delay: 12s;
+		}
+
+		.delay8 {
+			animation-delay: 14s;
+			-webkit-animation-delay: 14s;
+		}
+
+		.delay9 {
+			animation-delay: 16s;
+			-webkit-animation-delay: 16s;
+		}
+
+		.delay10 {
+			animation-delay: 18s;
+			-webkit-animation-delay: 18s;
+		}
+
+		.delay11 {
+			animation-delay: 20s;
+			-webkit-animation-delay: 20s;
+		}
+
+		.delay12 {
+			animation-delay: 22s;
+			-webkit-animation-delay: 22s;
+		}
+
+		.delay13 {
+			animation-delay: 24s;
+			-webkit-animation-delay: 24s;
+		}
+
+		.delay14 {
+			animation-delay: 26s;
+			-webkit-animation-delay: 26s;
+		}
+
+		.delay15 {
+			animation-delay: 28s;
+			-webkit-animation-delay: 28s;
+		}
+
+
+		@keyframes hover {
+			0%, 9%, 21%, 100% {
+				stroke: #d8d8d8;
+				fill: #FFFFFF;
+			}
+
+			14%, 16% {
+				fill: #E1F5FD;
+				stroke: #3892F1;
+			}
+		}
+
+		#card1,
+		#card1-image,
+		#card4,
+		#card4-image,
+		#card4,
+		#card4-image,
+		#card6,
+		#card6-image,
+		#card9,
+		#card9-image
+		#card10,
+		#card10-image,
+		#card11,
+		#card11-image,
+		#card14,
+		#card14-image,
+		#card15,
+		#card15-image,
+
+		{
+			display: none;
+		} 
+
+		@media screen and (max-width: 768px) {
+			#card5, card5-image, #card10, card10-image, #card15, card15-image  {
+				display: none;
+			}
+		}
+	</style>
+
+	<defs>
+		<filter id="dropshadow" height="130%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="0"/> <!-- stdDeviation is how much to blur -->
+			<feOffset dx="1" dy="1" result="offsetblur"/> <!-- how much to offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="0.1"/> <!-- slope is the opacity of the shadow -->
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> <!-- this contains the offset blurred image -->
+				<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+			</feMerge>
+		</filter>
+
+	</defs>
+
+	<!-- Row 1 -->
+		<rect id="card1" x="-85" y="25" width="105" height="75" class="animate delay3"/>
+		<image id="card1-image" x="-55" y="45" width="42" height="31.75083618" xlink:href="./bravo-logo.svg"></image>
+
+		<rect id="card2" x="45" y="25" width="105" height="75" class="animate delay13"/>
+		<image id="card2-image" x="60" y="55" width="70" height="11.05700713" xlink:href="./cnbc-logo-dark.svg"></image>
+
+		<rect id="card3" x="175" y="25" width="105" height="75" class="animate delay7"/>
+		<image id="card3-image" x="205" y="45" width="45" height="34.97993927" xlink:href="./telemundo-logo.svg"></image>
+
+		<rect id="card4" x="310" y="25" width="105" height="75" class="animate delay9"/>
+		<image id="card4-image" x="330" y="30" width="70" height="70" xlink:href="./nbc-news-logo.svg"></image>
+
+		<rect id="card5" x="435" y="25" width="105" height="75" class="animate delay2"/>
+		<image id="card5-image" x="470" y="55" width="42" height="18.42980083" xlink:href="./usa-logo.svg"></image>
+
+		<!-- Row 2 -->
+		<rect id="card6" x="-85" y="124" width="105" height="75" class="animate delay1"/>
+		<image id="card6-image" x="-50" y="140" width="33.14773" height="35" xlink:href="./syfy-logo.svg"></image>
+
+		<rect id="card7" x="45" y="124" width="105" height="75" class="animate delay4"/>
+		<image id="card7-image" x="75" y="145" width="42" height="25.82887701" xlink:href="./sprout-logo.svg"></image>
+
+		<rect id="card8" x="175" y="124" width="105" height="75" class="animate delay6"/>
+		<image id="card8-image" x="220" y="140" width="12.98181818" height="42" xlink:href="./e!-logo.svg"></image>
+
+		<rect id="card9" x="310" y="124" width="105" height="75" class="animate delay5"/>
+		<image id="card9-image" x="330" y="150" width="70" height="20.2605224" xlink:href="./esquire-logo.svg"></image>
+
+		<rect id="card10" x="435" y="124" width="105" height="75" class="animate delay15"/>
+		<image id="card10-image" x="460" y="155" width="50" height="15.0374495" xlink:href="./nbc-golf-logo.svg"></image>
+
+
+		<!-- Row 3 -->
+		<rect id="card11" x="-85" y="220" width="105" height="75" class="animate delay11"/>
+		<image id="card11-image" x="-50" y="235" width="33.38461538" height="42" xlink:href="./g4-logo.svg"></image>
+
+		<rect id="card12" x="45" y="220" width="105" height="75" class="animate delay10"/>
+		<image id="card12-image" x="75" y="235" width="40" height="39.42255478" xlink:href="./nbc-logo.svg"></image>
+
+		<rect id="card13" x="175" y="220" width="105" height="75" class="animate delay8"/>
+		<image id="card13-image" x="195" y="255" width="60" height="9.741699732" xlink:href="./msnbc-logo.svg"></image>
+
+		<rect id="card14" x="310" y="220" width="105" height="75" class="animate delay14"/>
+		<image id="card14-image" x="345" y="235" width="42" height="42.92494611" xlink:href="./nbc-sports-logo.svg"></image>
+
+		<rect id="card15" x="435" y="220" width="105" height="75" class="animate delay12"/>
+		<image id="card15-image" x="465" y="240" width="42" height="33.6" xlink:href="./oxygen-logo.svg"></image>
+
+
+</svg>

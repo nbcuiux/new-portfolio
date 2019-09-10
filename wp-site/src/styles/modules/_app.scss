@@ -1,0 +1,71 @@
+.app-container {
+	font-family: Roboto, serif;
+
+	&.works-active {
+		//menu
+		.menu-about-container {
+			.menu-counter, .menu-hamburger-icon {
+				opacity: 0;
+				height: 0;
+			}
+			&:hover {
+				right: 0px;
+				.menu-label__nd {
+					opacity: 1;
+					//width: auto;
+				}
+			}
+		}
+	}
+	&.about-active {
+		
+	}
+}
+
+.expendable-mark, .mark {
+	display: inline-block;
+	content: "";
+	width: 20px;
+	height: 1px;
+	background: $color-primary;
+	position: relative;
+	left: 0;
+	top: 4px;
+	margin-right: 5px;
+	transition: all 1s ease-in-out;
+}
+
+.expendable-mark {
+	width: 0px;
+	margin-right: 0;
+}
+
+.section-container--initialized {
+	.expendable-mark {
+		width: 20px;
+		margin-right: 5px;
+	}
+	.slogan-container {
+		left: 0;
+		opacity: 1.0;
+	}
+}
+
+.small-text {
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.section-container {
+	
+}
+
+
+.title-container {
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+.wrapper {
+	position: relative;
+}

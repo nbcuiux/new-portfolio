@@ -1,0 +1,162 @@
+// ERIC RULEZ
+
+#fh5co-offcanvas {
+  position: fixed;
+  z-index: 1901;
+  max-width: 100vw;
+  width: 100%;
+  height: 100vh;
+  background: rgba(_palette($theme,brand-white), 1);
+  top: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 82px;
+  display: block;
+  overflow: hidden;
+  @include translate3d(0,100%,0);
+  $transition: transform _animation(duration) _animation(easing2);
+  @include transition($transition);
+
+  #menu-list {
+    position: fixed;
+    z-index: 1903;
+    max-width: 100vw;
+    width: 100%;
+    top: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    text-align: center;
+
+    a {
+      color: lighten(_palette($theme,brand-black), 0%);
+      @include heading1();
+      display: block;
+      height: 61vh;
+      @include flex();
+      @include flex-align-items(center);
+      @include flex-justify-content(center);
+      opacity: 1;
+      $transition: transform _animation(duration) _animation(easing2), opacity (_animation(duration) * 3) _animation(easing3);
+      @include transition($transition);
+
+      &:hover, &:active, &:focus {
+        background-color: none;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+
+      span {
+        display: inline-block;
+        @include transition(transform (_animation(duration)) _animation(easing));
+        transform: translateZ(0) translateY(0);
+        margin: 0 1vw;
+      }
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+         @include transition-delay(#{$i * 0.18}s);
+          span {
+            @for $j from 1 through 4 {
+              &:nth-child(4n+#{$j}) {
+                transition-delay: #{($j * 0.09) + ($i * 0.09)}s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.scrolling {
+      li {
+        // filter: blur(5px);
+      }
+      a {
+        span {
+          &:nth-child(4n+1) {
+            transform: translateZ(0) translateY(-20%);          
+          }
+          &:nth-child(4n+2) {
+            transform: translateZ(0) translateY(35%);          
+          }
+          &:nth-child(4n+3) {
+            transform: translateZ(0) translateY(-35%);          
+          }
+          &:nth-child(4n+4) {
+            transform: translateZ(0) translateY(50%);          
+          }
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      > li {
+        padding: 0;
+        margin: 0;
+
+        z-index: 1903;
+        opacity: 0;
+        filter: blur(0px);
+        @include transition(all (_animation(duration)) _animation(easing));
+        $transform: translate3d(0,50%,0) skewY(15deg);
+        @include transform($transform);
+
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            @include transition-delay(#{$i * 0.18}s);
+          }
+        }
+      }
+    }
+  }
+}
+
+&:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  background: rgba(_palette($theme,brand-black),.2);
+  @include transition(opacity 2s _animation(easing2));
+  @include translate3d(-100%,0,0);
+  opacity: 0;
+}
+
+&.offcanvas {
+  overflow: hidden;
+
+  #fh5co-offcanvas {
+    @include translate3d(0,0,0);
+    $transition: transform _animation(duration) _animation(easing2);
+    @include transition($transition);
+
+    #menu-list {
+      li {
+        $transform: translate3d(0,0,0) skewY(0deg);
+        @include transform($transform);
+        opacity: 1;
+      }
+      a {
+        opacity: 1.0;
+        @include translate3d(0,0,0);
+      }
+    }
+  }
+
+  &:after {
+    opacity: 1;
+    @include translate3d(0,0,0);
+  }
+}   
+

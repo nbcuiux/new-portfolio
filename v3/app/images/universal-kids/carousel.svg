@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+
+	<style>
+
+		#row {
+			animation: scroll 16s linear infinite;
+			-webkit-animation: scroll 16s linear infinite;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes scroll {
+			0% {
+				transform: translate3d(0px, 0, 0);
+			}
+			100% {
+				transform: translate3d(-1060px, 0, 0);
+			}
+		}
+
+
+
+
+	</style>
+	<defs>
+
+		<style type="text/css">
+			@font-face {
+			font-family: 'Apex New Book';
+			src: url('../../fonts/Apex-New-Book/apexnew-book-webfont.woff2') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			}
+		</style>
+	</defs>
+	<!-- <image id="logo" x="150" y="10" width="40" xlink:href="./logo.png"></image> -->
+
+	<g id="row">
+
+		<image id="thumb1" x="-210" y="30" height="260" width="447.2" xlink:href="./top-chef-jr.png"></image>
+		<image id="thumb2" x="250" y="30" height="260" width="134.16" xlink:href="./which-show.png"></image>
+		<image id="thumb3" x="400" y="30" height="260" width="134.16" xlink:href="./the-next-step.png"></image>
+		<image id="thumb4" x="550" y="30" height="260" width="134.16" xlink:href="./hank-zipzer.png"></image>
+		<image id="thumb5" x="700" y="30" height="260" width="134.16" xlink:href="./king-julien.png"></image>
+		<image id="thumb6" x="850" y="30" height="260" width="447.2" xlink:href="./top-chef-jr.png"></image>
+		<image id="thumb7" x="1310" y="30" height="260" width="134.16" xlink:href="./which-show.png"></image>
+		<image id="thumb8" x="1460" y="30" height="260" width="134.16" xlink:href="./the-next-step.png"></image>
+
+	</g>
+</svg>

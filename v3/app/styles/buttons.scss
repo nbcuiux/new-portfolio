@@ -1,0 +1,150 @@
+@import 'functions';
+@import 'colors';
+@import 'mixins';
+
+// Buttons
+.btn {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  @include border-radius(0px);
+  @include transition(all .5s ease);
+  padding: 8px 20px;
+
+  &.btn-md {
+    padding: 8px 20px!important;
+  }
+
+  &.btn-lg {
+    padding: 18px 36px!important;
+  }
+
+  &:hover, &:active, &:focus {
+    box-shadow: none!important;
+    outline: none!important;
+  }
+}
+.btn-primary {
+  background: _palette($theme, brand-primary);
+  color: _palette($theme,brand-white);
+  border: 2px solid _palette($theme, brand-primary);
+  &:hover, &:focus, &:active {
+    background: lighten(_palette($theme, brand-primary), 5%)!important;
+    border-color: lighten(_palette($theme, brand-primary), 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: _palette($theme, brand-primary);
+    border: 2px solid _palette($theme, brand-primary);
+    &:hover, &:focus, &:active {
+      background: _palette($theme, brand-primary);
+      color: _palette($theme,brand-white);
+    }
+  }
+}
+.btn-success {
+  background: _palette($theme, brand-primary);
+  color: _palette($theme,brand-white);
+  border: 2px solid _palette($theme, brand-primary);
+  &:hover, &:focus, &:active {
+    background: darken(_palette($theme, brand-primary), 5%)!important;
+    border-color: darken(_palette($theme, brand-primary), 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: _palette($theme, brand-primary);
+    border: 2px solid _palette($theme, brand-primary);
+    &:hover, &:focus, &:active {
+      background: _palette($theme, brand-primary);
+      color: _palette($theme,brand-white);
+    }
+  }
+}
+.btn-info {
+  background: _palette($theme, brand-primary);
+  color: _palette($theme,brand-white);
+  border: 2px solid _palette($theme, brand-primary);
+  &:hover, &:focus, &:active {
+    background: darken(_palette($theme, brand-primary), 5%)!important;
+    border-color: darken(_palette($theme, brand-primary), 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: _palette($theme, brand-primary);
+    border: 2px solid _palette($theme, brand-primary);
+    &:hover, &:focus, &:active {
+      background: _palette($theme, brand-primary);
+      color: _palette($theme,brand-white);
+    }
+  }
+}
+.btn-warning {
+  background: _palette($theme, brand-primary);
+  color: _palette($theme,brand-white);
+  border: 2px solid _palette($theme, brand-primary);
+  &:hover, &:focus, &:active {
+    background: darken(_palette($theme, brand-primary), 5%)!important;
+    border-color: darken(_palette($theme, brand-primary), 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: _palette($theme, brand-primary);
+    border: 2px solid _palette($theme, brand-primary);
+    &:hover, &:focus, &:active {
+      background: _palette($theme, brand-primary);
+      color: _palette($theme,brand-white);
+    }
+  }
+}
+.btn-danger {
+  background: _palette($theme, brand-primary);
+  color: _palette($theme,brand-white);
+  border: 2px solid _palette($theme, brand-primary);
+  &:hover, &:focus, &:active {
+    background: darken(_palette($theme, brand-primary), 5%)!important;
+    border-color: darken(_palette($theme, brand-primary), 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: _palette($theme, brand-primary);
+    border: 2px solid _palette($theme, brand-primary);
+    &:hover, &:focus, &:active {
+      background: _palette($theme, brand-primary);
+      color: _palette($theme,brand-white);
+    }
+  }
+}
+
+.btn-outline {
+  background: none;
+  border: 2px solid lighten(_palette($theme,brand-black), 50%);
+  font-size: 16px;
+  @include transition(all .3s ease);
+  &:hover, &:focus, &:active {
+    box-shadow: none;
+  }
+}
+
+.btn.with-arrow {
+  position: relative;
+  @include transition(all .3s ease);
+  i {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -8px;
+    @include transition(all .2s ease);
+  }
+  &:hover {
+    padding-right: 50px;
+    i {
+      color: _palette($theme,brand-white);
+      right: 18px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

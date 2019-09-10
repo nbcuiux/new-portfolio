@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<style>
+		svg {
+			background: #373b41;
+		}
+		@media screen and (max-width: 768px) {
+			#row  {
+				transform: translateX(-70px);
+			}
+		}
+
+	</style>
+
+	<defs>
+
+		<filter id="dropshadow" height="130%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+			<feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="1"/> <!-- slope is the opacity of the shadow -->
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> <!-- this contains the offset blurred image -->
+				<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+			</feMerge>
+		</filter>
+
+		<circle id="dot" cx="5" cy="5" r="4" stroke="white" stroke-width="1.5" fill="#16c74c" />
+
+		<clipPath id="mask-thumb2">
+			<rect x="0" y="0" width="352" height="328" />
+		</clipPath>
+
+		<clipPath id="mask-thumb3">
+			<rect x="328" y="0" width="328" height="328" />
+		</clipPath>
+
+		<style type="text/css">
+			@font-face {
+			font-family: 'Apex New Book';
+			src: url('../../fonts/Apex-New-Book/apexnew-book-webfont.woff2') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			}
+		</style>
+	</defs>
+	<g id="row">
+		<image id="thumb2" x="10" y="30" width="280" height="521.041041" xlink:href="./annotations.png" style="filter:url(#dropshadow)"></image>
+
+		<circle id="dot" cx="45" cy="40" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="175" cy="40" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="230" cy="40" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="55" cy="117" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="95" cy="127" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="135" cy="142" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="50" cy="157" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="240" cy="187" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+		<circle id="dot" cx="25" cy="215" r="4" stroke="white" stroke-width="1.5" fill="#16c74c"/>
+
+		<image id="thumb3" x="328" y="30" width="153.5771725" height="328" xlink:href="./annotations-sidebar.png"></image>
+	</g>
+</svg>

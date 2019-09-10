@@ -1,0 +1,71 @@
+#nav-progress-bar {
+  position: fixed;
+  z-index: 1901;
+  max-width: 100vw;
+  width: 100%;
+  top: 10vh;
+  left: 0;
+  @include flex();
+  @include flex-align-items(center);
+  @include flex-justify-content(center);
+  @include flex-direction(column);
+
+  @include translate3d(0,0,0);
+  $transition: transform (_animation(duration) * 3) _animation(easing);
+  @include transition($transition);
+
+  @for $i from 1 through 100 {
+    &.height#{$i} {
+      transform: translateY(#{$i * 0.24}vh);
+    }
+  }
+
+  .progress-line {
+    $height: 36vh;
+    height: $height;
+    width: 1px;
+
+    &--background, &--foreground {
+      position: absolute;
+    }
+
+    &--background {
+      background: lighten(_palette($theme,brand-black), 55%);
+      height: $height;
+    }
+
+    &--foreground {
+      height: $height;
+      background: lighten(_palette($theme,brand-primary), 0%);
+      transform-origin: top;
+      @include transition(transform (_animation(duration) * 3) _animation(easing2));
+      transform: scaleY(0);
+
+      @for $i from 1 through 100 {
+        &.height#{$i} {
+          transform: scaleY(#{$i * 0.01});
+        }
+      }
+    }
+  }
+
+  .progress-number {
+    text-align: center;
+    margin-left: 1px;
+
+    &--current {
+
+    }
+
+    &--total {
+
+    }
+  }
+}
+
+.active1 span{
+
+
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: 1px #e73c0e;
+}

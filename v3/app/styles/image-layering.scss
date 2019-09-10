@@ -1,0 +1,36 @@
+.image-group {
+	width: 100%;
+
+	&--layered1 {
+		.background, .foreground {
+			opacity: 0;
+			background: lighten(_palette($theme,brand-black), 79%);
+			@include transition(all _animation(duration) _animation(easing2));
+			@include transform(translateX(-50px));
+
+			@for $j from 1 through 6 {
+				&:nth-child(#{$j}) {
+					transition-delay: #{$j * 0.18}s;
+				}
+			}
+		} 
+		.background {
+			@include shadows();
+			top: 0;
+			left: 0;
+			width: 60%;
+		}
+		.foreground {
+			margin-top: -12.5%;
+			margin-bottom: 12.5%;
+			@include shadows2();
+			width: 60%;	
+			margin-left: 40%;
+		}
+	}
+	&--right {
+		.background, .foreground {
+			@include transform(translateX(50px));
+		}
+	}
+}

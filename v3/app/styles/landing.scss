@@ -1,0 +1,73 @@
+.hero-landing {
+	pointer-events: none !important;
+	.img-wrapper {
+		z-index: _zindex(closest);
+		position: fixed;
+		transition: all (_animation(duration) * 2) _animation(easing) !important;
+		top: calc(170px + 10em);
+		left: calc(49.99999999% + 15px);
+		width: calc(41.6666666667% - 45px);
+		height: 53.5%;
+	}
+	&.expanded {
+		.img-wrapper {
+			transition: none !important;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&:hover {
+		.img-wrapper {
+			transform: none !important;
+		}
+	}
+}
+.hero-delay {
+	svg {
+		g {
+			@for $i from 1 through 3 {
+				&:nth-child(#{$i}) {
+					transition-delay: #{(($i - 1) * 1.2) + 2.4}s !important;
+					text {
+						@for $j from 1 through 10 {
+							&:nth-child(#{$j}) {
+								transition-delay: #{($j * 0.09) + (($i - 1) * 1.2) + 2.4}s !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.fh5co-heading {
+		.tags {
+			span {
+				@for $j from 1 through 12 {
+					&:nth-child(#{$j}) {
+						transition-delay: #{($j * 0.09) + 2.5}s !important;
+					}
+				}
+			}
+		}
+		.links {
+			a {
+				@for $j from 1 through 4 {
+					&:nth-child(#{$j}) {
+						transition-delay: #{(($j * 0.12) + 2.6)}s !important;
+					}
+				}
+			}
+		}
+		p {
+			span {
+				@for $j from 1 through 4 {
+					&:nth-last-child(4n+#{$j}) {
+						transition-delay: #{(($j * 0.12) + 2.7)}s !important;
+					}
+				}
+			}
+		}
+	}
+}

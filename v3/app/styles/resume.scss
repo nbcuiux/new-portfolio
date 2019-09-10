@@ -1,0 +1,42 @@
+.fh5co-heading {
+  h2 {
+    font-size: 40px;
+    color: _palette($theme,brand-primary);
+    font-weight: bold;
+    line-height: 1em;
+    text-transform: initial;
+  }
+  .info-block {
+    margin-bottom: 30px;
+
+    h3 {
+      margin: 0;
+    }
+
+    span {
+      font-size: 1.1em;
+    }
+
+    ul {
+      padding-left: 21px;
+      li {
+        list-style-type: decimal;
+        list-style-position: outside;
+        padding-left: 11px;
+        line-height: 1.2em;
+        font-size: 1.2em;
+        margin-bottom: 6px;
+
+        &:first-child {
+          margin-top: 6px;
+        }
+
+      }
+    }
+    &--small {
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+}

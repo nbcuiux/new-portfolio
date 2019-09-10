@@ -1,0 +1,107 @@
+div[ui-view] {
+  &.active {
+    transition: all (_animation(duration) * 1.5) _animation(easing2); 
+
+    ~ #page-wipe {
+      position: fixed;
+      content: '';
+      background: lighten(_palette($theme, brand-black), 78%);
+      z-index: _zindex(closest);
+      height: 100vh;
+      width: 100vw;
+      left: 0;
+      top: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform (_animation(duration) * 0.75) _animation(easing2);
+    }
+
+    &.ng-enter {
+      opacity: 0;
+      ~ #page-wipe {
+        transform-origin: right;
+      }
+    }
+
+    &.ng-enter-active {
+      opacity: 1;
+      ~ #page-wipe {
+        transform: scaleX(0);
+      }
+    }
+
+    &.ng-leave {
+      opacity: 0;
+      ~ #page-wipe {
+        transform: scaleX(1);
+      }
+    }
+
+    &.ng-leave-active {
+      opacity: 0;
+      ~ #page-wipe {
+          transform-origin: left;
+      }
+    }
+
+    @keyframes page-wipe-horiz {
+      0% {
+        transform-origin: right;
+        transform: scaleX(0);
+      }
+      55% {
+        transform-origin: right;
+        transform: scaleX(1);
+      }
+      62% {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+      100% {
+        transform-origin: left;
+        transform: scaleX(0);
+      }
+    }
+
+    @keyframes page-wipe-horiz-in {
+      0% {
+        transform-origin: left;
+        transform: scaleX(0);
+      }
+      100% {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes page-wipe-horiz-out {
+      0% {
+        transform-origin: right;
+        transform: scaleX(1);
+      }
+      100% {
+        transform-origin: right;
+        transform: scaleX(0);
+      }
+    }
+
+    @keyframes page-wipe-vert {
+      0% {
+        transform-origin: bottom;
+        transform: scaleY(0);
+      }
+      60% {
+        transform-origin: bottom;
+        transform: scaleY(1);
+      }
+      61% {
+        transform-origin: top;
+        transform: scaleY(1);
+      }
+      100% {
+        transform-origin: top;
+        transform: scaleY(0);
+      }
+    }
+  }
+}

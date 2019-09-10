@@ -1,0 +1,18 @@
+//Greetings
+.greeting-container {
+	padding: 30px 12%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.slogan-container {
+	font-size: 3.5vw;
+	font-weight: 200;
+	line-height: 5.5vw;
+	width: 80%;
+	opacity: 0.0;
+	position: relative;
+	left:-30px;
+	transition: all 0.5s ease-out;
+}

@@ -1,0 +1,750 @@
+.process {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  flex-shrink: 0;
+  left: 40%;
+}
+.fh5co-section.process__side {
+  width: 40%;
+  position: absolute;
+  padding: 0;
+  padding-left: 6%;
+  height: 100%;
+  padding-top: 20%;
+  top: -1px;
+
+  .fh5co-heading {
+    padding-right: 6vw;
+    
+    h3 {
+      font-weight: 200;
+      font-size: 32px;
+    }
+
+    p {
+      color: #999999;
+
+    }
+  }
+}
+@media screen and (max-width: 1240px) {
+  .process {
+    left: 70%;
+    transform: translate(-50%, 0);
+  }
+}
+@media screen and (max-width: $screen-sm) {
+  .fh5co-section.process__side  {
+    width: 100%;
+    position: relative;
+  }
+  .process {
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    transform: scale(0.6) translate(0, 0);
+
+    .title {
+      display: none;
+    }
+    .step__number {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .step__info {
+      width: 180px;
+    }
+    .step-1 .step__info {
+      bottom: calc(100% + 30px);
+      left: -20px;
+    }
+    .step-2 .step__info {
+      top: -60px;
+    }
+    .step-3 .step__info {
+      left: 40px;
+      top: -30px
+    }
+    .step-4 .step__info {
+      top: calc(100% - 20px);
+    }
+    .step-5 .step__info {
+      top: calc(100% - 10px);
+    }
+  }
+}
+.process__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+
+  &:before {
+    content: '';
+    background: lighten(_palette($theme, brand-black), 30%);
+    -webkit-filter: blur(25px);
+    filter: blur(25px);
+    height: 5px;
+    width: 75%;
+    margin-left: 3.75%;
+    position: absolute;
+    bottom: -15%;
+
+  }
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 200px;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  color: #999999;
+}
+.center {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+}
+.center__circle {
+  stroke: #999999;
+  stroke-width: 0.7;
+  fill: transparent;
+  vector-effect: non-scaling-stroke;
+}
+.circle__arc {
+  stroke: #999999;
+  stroke-width: 0.7;
+  fill: transparent;
+  vector-effect: non-scaling-stroke;
+}
+.super-q {
+  position: relative;
+}
+.q {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  background: #fafafa;
+}
+.q1 {
+  top: 0;
+  left: 0;
+}
+.q2 {
+  top: 0;
+  left: 50%;
+}
+.q3 {
+  top: 50%;
+  left: 0;
+}
+.q4 {
+  top: 50%;
+  left: 50%;
+}
+.step {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.step-1 {
+  top: 0;
+  left: 50%;
+}
+.step-2 {
+  top: 14.64466094%;
+  left: 85.35533906%;
+}
+.step-3 {
+  top: 50%;
+  left: 100%;
+}
+.step-4 {
+  top: 85.35533906%;
+  left: 85.35533906%;
+}
+.step-5 {
+  top: 100%;
+  left: 50%;
+}
+.step-6 {
+  top: 85.35533906%;
+  left: 14.64466094%;
+}
+.step-7 {
+  top: 50%;
+  left: 0;
+}
+.step-8 {
+  top: 14.64466094%;
+  left: 14.64466094%;
+}
+.step__spot-svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.step__spot-fill {
+  fill: #ffffff;
+}
+.step__spot-circle {
+  fill: #ffffff;
+  stroke: #999999;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.7;
+}
+.step-1 .is-checked .step__spot-circle {
+  stroke: #FF6701;
+  fill: #FF6701;
+}
+.step-2 .is-checked .step__spot-circle {
+  stroke: #EA610C;
+  fill: #EA610C;
+}
+.step-3 .is-checked .step__spot-circle {
+  stroke: #D45B17;
+  fill: #D45B17;
+}
+.step-4 .is-checked .step__spot-circle {
+  stroke: #BF5522;
+  fill: #BF5522;
+}
+.step-5 .is-checked .step__spot-circle {
+  stroke: #A94F2E;
+  fill: #A94F2E;
+}
+.step-6 .is-checked .step__spot-circle {
+  stroke: #944939;
+  fill: #944939;
+}
+.step-7 .is-checked .step__spot-circle {
+  stroke: #7E4344;
+  fill: #7E4344;
+}
+.step-8 .is-checked .step__spot-circle {
+  stroke: #693D4F;
+  fill: #693D4F;
+}
+.step__arc {
+  stroke-width: 1.4;
+  fill: transparent;
+  vector-effect: non-scaling-stroke;
+}
+.step__arc.step__arc-1 {
+  stroke: url(#grad-arc-1);
+}
+.step__arc.step__arc-2 {
+  stroke: url(#grad-arc-2);
+}
+.step__arc.step__arc-3 {
+  stroke: url(#grad-arc-3);
+}
+.step__arc.step__arc-4 {
+  stroke: url(#grad-arc-4);
+}
+.step__arc.step__arc-5 {
+  stroke: url(#grad-arc-5);
+}
+.step__arc.step__arc-6 {
+  stroke: url(#grad-arc-6);
+}
+.step__arc.step__arc-7 {
+  stroke: url(#grad-arc-7);
+}
+.step__arc.step__arc-8 {
+  stroke: url(#grad-arc-8);
+}
+.step__number {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-primary;
+  font-size: 12px;
+  color: #999999;
+  line-height: 1.4;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+}
+.is-checked .step__number {
+  color: #ffffff;
+  font-weight: 700;
+}
+.step__info {
+  position: absolute;
+  width: 200px;
+  pointer-events: all;
+}
+.step__info.active:hover .step__text,
+.step__info.active:hover .step__header {
+  opacity: 0 !important;
+  transition: opacity 0.2s ease-in-out;
+}
+.step__info.active:hover .step__role {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.step-1 .step__info {
+  bottom: 0;
+  left: 60px;
+  transform: translate(0, 0);
+}
+.step-2 .step__info {
+  top: 0;
+  left: 80px;
+  transform: translate(0, 0);
+}
+.step-3 .step__info {
+  top: 0;
+  left: 60px;
+  transform: translate(0, 0);
+}
+.step-4 .step__info {
+  top: 100%;
+  left: 20px;
+  transform: translate(0, 20px);
+}
+.step-5 .step__info {
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translate(-45%, 0);
+}
+.step-6 .step__info {
+  top: 0;
+  right: 30px;
+  transform: translate(0, -15%);
+}
+.step-7 .step__info {
+  top: 0;
+  right: 30px;
+  transform: translate(0, -65%);
+}
+.step-8 .step__info {
+  top: -20px;
+  right: 0px;
+  transform: translate(0, -100%);
+}
+.step__role {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  text-align: center;
+}
+.step-1 .step__role {
+  bottom: -10px;
+  left: 0px;
+}
+.step-2 .step__role {
+  top: 40px;
+  left: -10px;
+  width: 191px;
+}
+.step-3 .step__role {
+  top: 0;
+}
+.step-4 .step__role {
+  top: -40px;
+  left: 30px;
+}
+.step-5 .step__role {
+  top: 0;
+  left: 0;
+  width: 191px;
+}
+.step-6 .step__role {
+  top: 30px;
+  right: 30px;
+  width: 191px;
+}
+.step-7 .step__role {
+  top: 80px;
+  right: 30px;
+}
+.step-8 .step__role {
+  top: 110px;
+  right: 50px;
+  width: 191px;
+}
+.step-1 .step__role {
+  color: #FF6701;
+}
+.step-2 .step__role {
+  color: #EA610C;
+}
+.step-3 .step__role {
+  color: #D45B17;
+}
+.step-4 .step__role {
+  color: #BF5522;
+}
+.step-5 .step__role {
+  color: #A94F2E;
+}
+.step-6 .step__role {
+  color: #944939;
+}
+.step-7 .step__role {
+  color: #7E4344;
+}
+.step-8 .step__role {
+  color: #693D4F;
+}
+.iconize {
+  position: relative;
+  width: 35px;
+}
+.step__icon {
+  position: relative;
+  width: 60px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  opacity: 0;
+  margin-bottom: 8px;
+}
+.step__icon.is-visible {
+  opacity: 1;
+}
+.article-list .step__icon {
+  width: auto;
+}
+.step__svg {
+  position: relative;
+  bottom: 0;
+}
+.step__header {
+  position: relative;
+  margin-bottom: 8px;
+  transition: opacity 0.2s ease-in-out;
+}
+.step__header::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 80px;
+  border: none;
+  background-color: black;
+}
+.step__title {
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.1;
+  color: black;
+  opacity: 0;
+}
+.step-1 .step__title {
+  color: #FF6701;
+}
+.step-2 .step__title {
+  color: #EA610C;
+}
+.step-3 .step__title {
+  color: #D45B17;
+}
+.step-4 .step__title {
+  color: #BF5522;
+}
+.step-5 .step__title {
+  color: #A94F2E;
+}
+.step-6 .step__title {
+  color: #944939;
+}
+.step-7 .step__title {
+  color: #7E4344;
+}
+.step-8 .step__title {
+  color: #693D4F;
+}
+.step__text {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.super-q {
+  position: relative;
+}
+.q {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  background: #fafafa;
+}
+.q1 {
+  top: 0;
+  left: 0;
+}
+.q2 {
+  top: 0;
+  left: 50%;
+}
+.q3 {
+  top: 50%;
+  left: 0;
+}
+.q4 {
+  top: 50%;
+  left: 50%;
+}
+
+.step {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.step-1 {
+  top: 0;
+  left: 50%;
+}
+.step-2 {
+  top: 14.64466094%;
+  left: 85.35533906%;
+}
+.step-3 {
+  top: 50%;
+  left: 100%;
+}
+.step-4 {
+  top: 85.35533906%;
+  left: 85.35533906%;
+}
+.step-5 {
+  top: 100%;
+  left: 50%;
+}
+.step-6 {
+  top: 85.35533906%;
+  left: 14.64466094%;
+}
+.step-7 {
+  top: 50%;
+  left: 0;
+}
+.step-8 {
+  top: 14.64466094%;
+  left: 14.64466094%;
+}
+.step__spot-svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.step__spot-fill {
+  fill: #FAFAFA;
+}
+.step__spot-circle {
+  fill: #FAFAFA;
+  stroke: #999999;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.7;
+}
+.step-1 .is-checked .step__spot-circle {
+  stroke: #FF6701;
+  fill: #FF6701;
+}
+.step-2 .is-checked .step__spot-circle {
+  stroke: #EA610C;
+  fill: #EA610C;
+}
+.step-3 .is-checked .step__spot-circle {
+  stroke: #D45B17;
+  fill: #D45B17;
+}
+.step-4 .is-checked .step__spot-circle {
+  stroke: #BF5522;
+  fill: #BF5522;
+}
+.step-5 .is-checked .step__spot-circle {
+  stroke: #A94F2E;
+  fill: #A94F2E;
+}
+.step-6 .is-checked .step__spot-circle {
+  stroke: #944939;
+  fill: #944939;
+}
+.step-7 .is-checked .step__spot-circle {
+  stroke: #7E4344;
+  fill: #7E4344;
+}
+.step-8 .is-checked .step__spot-circle {
+  stroke: #693D4F;
+  fill: #693D4F;
+}
+.step__arc {
+  stroke-width: 1.4;
+  fill: transparent;
+  vector-effect: non-scaling-stroke;
+}
+.step__arc.step__arc-1 {
+  stroke: url(#grad-arc-1);
+}
+.step__arc.step__arc-2 {
+  stroke: url(#grad-arc-2);
+}
+.step__arc.step__arc-3 {
+  stroke: url(#grad-arc-3);
+}
+.step__arc.step__arc-4 {
+  stroke: url(#grad-arc-4);
+}
+.step__arc.step__arc-5 {
+  stroke: url(#grad-arc-5);
+}
+.step__arc.step__arc-6 {
+  stroke: url(#grad-arc-6);
+}
+.step__arc.step__arc-7 {
+  stroke: url(#grad-arc-7);
+}
+.step__arc.step__arc-8 {
+  stroke: url(#grad-arc-8);
+}
+.step__number {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-primary;
+  font-size: 12px;
+  color: #999999;
+  line-height: 14px;
+  height: 14px;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+}
+.is-checked .step__number {
+  color: #ffffff;
+  font-weight: 700;
+}
+.step__info {
+  position: absolute;
+  width: 200px;
+}
+.step-1 .step__info {
+  bottom: calc(100% + 20px);
+  left: 0px;
+  transform: translate(0, 0);
+}
+.step-2 .step__info {
+  top: 0;
+  left: 80px;
+  transform: translate(0, -40%);
+}
+.step-3 .step__info {
+  top: 0;
+  left: 60px;
+  transform: translate(0, 0);
+}
+.step-4 .step__info {
+  top: 100%;
+  left: 20px;
+  transform: translate(0, 20px);
+}
+.step-5 .step__info {
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translate(-45%, 0);
+}
+.step-6 .step__info {
+  top: 0;
+  right: 30px;
+  transform: translate(0, -15%);
+}
+.step-7 .step__info {
+  top: 0;
+  right: 30px;
+  transform: translate(0, -65%);
+}
+.step-8 .step__info {
+  top: -20px;
+  right: 0px;
+  transform: translate(0, -100%);
+}
+.step__icon {
+  position: relative;
+  width: 60px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  opacity: 0;
+  margin-bottom: 8px;
+}
+.step__svg {
+  position: relative;
+  bottom: 0;
+}
+.step__header {
+  position: relative;
+  margin-bottom: 8px;
+}
+.step__header::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 80px;
+  border: none;
+  background-color: black;
+}
+.step__title {
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.1;
+  color: black;
+  opacity: 0;
+}
+.step-1 .step__title {
+  color: #FF6701;
+}
+.step-2 .step__title {
+  color: #EA610C;
+}
+.step-3 .step__title {
+  color: #D45B17;
+}
+.step-4 .step__title {
+  color: #BF5522;
+}
+.step-5 .step__title {
+  color: #A94F2E;
+}
+.step-6 .step__title {
+  color: #944939;
+}
+.step-7 .step__title {
+  color: #7E4344;
+}
+.step-8 .step__title {
+  color: #693D4F;
+}
+.step__text {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  opacity: 0;
+}

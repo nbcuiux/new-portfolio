@@ -1,0 +1,66 @@
+#footer-about {
+	position: fixed;
+	bottom: 0px;
+	right: 15px;
+	@include transform(rotate(90deg));
+	transform-origin: top right;
+	@include flex();
+	@include flex-direction(row);
+	@include flex-align-items(center);
+	@include flex-justify-content(flex-end);
+	
+	.line {
+		stroke: lighten(_palette($theme, brand-black), 65%);
+		stroke-width: 1px;
+		@include transition(transform (_animation(duration) / 2) _animation(easing));
+		@include transform(scale(-1,1));
+	}
+
+	.mask {
+		overflow: hidden;
+		width: 27px;
+		$transition: transform (_animation(duration) * 2) _animation(easing2);
+		@include transition($transition);
+
+		span {
+			// letter-spacing: 1px;
+			margin-left: 12px;
+			font-size: 21px;
+			font-weight: 600;
+			color: _palette($theme, brand-black);
+		}
+	}
+
+
+	&:hover {
+		.mask {
+			width: auto;
+			@include transform(translateX(-50%));
+		}
+		.line {
+			stroke: lighten(_palette($theme, brand-primary), 35%); 
+			@include transform(scale(-1,1) translateX(-50%));
+		}
+	}
+	@media screen and (max-width: $screen-sm ) {
+		transform-origin: 95% 40%;
+		right: 0px;
+		.mask {
+			width: 23px;
+			span {
+				font-weight: bold;
+				font-size: 16px;
+			}
+		}
+		&:hover {
+			.mask {
+				width: 23px;
+				transform: translateX(0px);
+			}
+			.line {
+				stroke: lighten(_palette($theme, brand-black), 65%);
+				transform: scale(-1,1) translateX(0px);
+			}
+		}
+	}
+}

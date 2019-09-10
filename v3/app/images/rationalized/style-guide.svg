@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="328px" height="328px" viewBox="0 0 328 328" enable-background="new 0 0 328 328" xml:space="preserve">
+	<script type="text/javascript"><![CDATA[
+		window.addEventListener('load',function(){
+			var isFirefox = typeof InstallTrigger !== 'undefined';
+
+			if (isFirefox) {
+				<!-- document.querySelectorAll('#thumb2')[0].setAttribute('x', -30); -->
+			}
+		},false);
+	]]></script>
+	<style>
+		svg {
+			background: radial-gradient(at 60% 40%, #1f1f1f, #0f0f0f);
+		}
+
+		#play {
+			transform-origin: 410px 164px;
+			animation: spread 12s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+		}
+
+		#play circle {
+			stroke: #FFFFFF;
+			stroke-width: 2px;
+		}
+
+		@keyframes spread {
+			0%, 7% {
+				opacity: 0;
+				transform: scale(0);
+			}
+
+			10%, 30% {
+				opacity: 1;
+				transform: scale(1.5);
+			}
+
+			33%, 57% {
+				opacity: 0;
+				transform: scale(4);
+			}
+
+			60%, 90% {
+				opacity: 1;
+				transform: scale(1.5);
+			}
+
+			93%, 100% {
+				opacity: 0;
+				transform: scale(0);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			#row {
+				transform: translateX(-30%);
+			}
+		}
+	</style>
+
+	<defs>
+
+		<filter id="dropshadow" height="130%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- stdDeviation is how much to blur -->
+			<feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope=".24"/> <!-- slope is the opacity of the shadow -->
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> <!-- this contains the offset blurred image -->
+				<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+			</feMerge>
+		</filter>
+
+
+		<clipPath id="mask-thumb2">
+			<rect x="0" y="0" width="328" height="328" />
+		</clipPath>
+	</defs>
+	<g id="row">
+
+        <!-- <image id="play" x="390" y="144" width="40" height="40" xlink:href="./play-icon.svg"></image> -->
+		<image id="thumb2" x="45" y="94" width="230.5" height="140" xlink:href="./rationalized-icons.svg" ></image>
+
+	</g>
+</svg>
