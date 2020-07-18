@@ -41,7 +41,7 @@
     "gulp-watch": "^4.3.10",
     "history": "^4.6.1",
     "jquery": "^3.2.1",
-    "lodash": "^4.16.6",
+    "lodash": "^4.17.19",
     "moment": "^2.18.0",
     "node-bourbon": "^4.2.8",
     "path": "^0.12.7",
